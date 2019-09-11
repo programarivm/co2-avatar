@@ -8,15 +8,13 @@ import {
 class Features extends React.Component {
   render() {
     return (
-      <div>
-        <Container>
-          <Row>
-            <Col lg="12">
-              <p>TODO</p>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+      <Container>
+        <Row>
+          <Col lg="12">
+            <p>TODO</p>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

@@ -1,16 +1,8 @@
 import React from 'react';
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  Collapse, Navbar, NavbarToggler,
+  NavbarBrand, Nav, NavItem,
+  NavLink } from 'reactstrap';
 import { Link, Route, Redirect } from 'react-router-dom';
 import { Home } from "./Home.js";
 import { Features } from "./Features.js";
