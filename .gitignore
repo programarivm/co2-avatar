@@ -24,4 +24,4 @@ yarn-error.log*
 
 # docker
 
-/docker/nginx/ssl
+/docker/nginx/ssl/co2.today.*
