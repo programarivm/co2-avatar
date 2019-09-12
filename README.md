@@ -23,6 +23,10 @@ Copy the following `.env` into the app's root directory:
 
     CO2_NGINX_HOST=172.21.0.1
 
+Reset the database:
+
+    docker exec -it co2_php_fpm php cli/reset-database.php
+
 ### 3. Generate the SSL Certificate
 
     cd docker/nginx/ssl

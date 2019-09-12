@@ -6,3 +6,13 @@ USE co2;
 
 GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, LOCK TABLES, CREATE TEMPORARY TABLES
 ON co2.* TO 'root'@'localhost' IDENTIFIED BY 'password';
+
+CREATE TABLE IF NOT EXISTS users (
+    id mediumint UNSIGNED NOT NULL AUTO_INCREMENT,
+    email VARCHAR(64) NOT NULL,
+    password VARCHAR(64) NOT NULL,
+    created_at DATETIME DEFAULT '2019-01-01 00:00:00',
+    PRIMARY KEY (id)
+) ENGINE=InnoDB;
+
+INSERT INTO users(email, password) VALUES ('bob-smith@foo.com', 'password');
