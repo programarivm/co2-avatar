@@ -20,9 +20,9 @@ if ($isVerified) {
     http_response_code(200);
     setcookie('access_token', $jwt);
 } else {
-  $body = ['message' => 'Unauthorized'];
-  http_response_code(401);
-  print_r(json_encode($body, true));
+    $body = ['message' => 'Unauthorized'];
+    http_response_code(401);
+    print_r(json_encode($body, true));
 }
 
 exit;
