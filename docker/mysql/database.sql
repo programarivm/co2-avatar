@@ -15,4 +15,4 @@ CREATE TABLE IF NOT EXISTS users (
     PRIMARY KEY (id)
 ) ENGINE=InnoDB;
 
-INSERT INTO users(email, password) VALUES ('bob-smith@foo.com', 'password');
+INSERT INTO users(email, password) VALUES ('bob-smith@foo.com', '$2y$12$AOR2qZ1UOOoSDahahCkRlut8q6j66IKPmbzYIYMWx678qcGg9uQga');
