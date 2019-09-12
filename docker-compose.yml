@@ -5,11 +5,11 @@ services:
       build: .
       container_name: co2_php_fpm
       restart: always
-      working_dir: /usr/share/nginx/co2
+      working_dir: /usr/share/nginx/CO2-footprint
       networks:
           - co2
       volumes:
-          - ./:/usr/share/nginx/co2
+          - ./:/usr/share/nginx/CO2-footprint
           - ./docker/php/php.ini:/usr/local/etc/php/php.ini
       extra_hosts:
           - "co2.today:${CO2_NGINX_HOST}"
@@ -18,13 +18,13 @@ services:
       image: nginx:1.15
       container_name: co2_nginx
       restart: always
-      working_dir: /usr/share/nginx/co2
+      working_dir: /usr/share/nginx/CO2-footprint
       networks:
           - co2
       ports:
           - "443:443"
       volumes:
-          - ./:/usr/share/nginx/co2
+          - ./:/usr/share/nginx/CO2-footprint
           - ./docker/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
           - ./docker/nginx/ssl/co2.today.crt:/etc/nginx/ssl/co2.today.crt
           - ./docker/nginx/ssl/co2.today.key:/etc/nginx/ssl/co2.today.key
