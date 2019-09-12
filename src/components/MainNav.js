@@ -5,11 +5,12 @@ import {
   NavLink } from 'reactstrap';
 import { Link, Route, Redirect } from 'react-router-dom';
 import { Home } from "./Home.js";
-import { Features } from "./Features.js";
-import { Faq } from "./Faq.js";
+import { SavePlanet } from "./SavePlanet.js";
 import { SignIn } from "./SignIn.js";
+import logo from '../assets/images/logo.png';
+import './MainNav.css';
 
-class NavBar extends React.Component {
+class MainNav extends React.Component {
   _isMounted = false;
 
   constructor(props) {
@@ -39,9 +40,9 @@ class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar light expand="md" className="MainNav">
           <NavbarBrand tag={Link} to="/home">
-            <b>CO2 Footprint</b>
+            <img src={logo} className="logo" alt="logo" />
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -53,12 +54,7 @@ class NavBar extends React.Component {
               </NavItem>
               <NavItem>
                 <NavLink tag={Link} to="/features">
-                  Features
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={Link} to="/faq">
-                  FAQ
+                  Save the planet
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -76,11 +72,7 @@ class NavBar extends React.Component {
         />
         <Route
           path="/features"
-          render={(props) => <Features {...props} />}
-        />
-        <Route
-          path="/faq"
-          render={(props) => <Faq {...props} />}
+          render={(props) => <SavePlanet {...props} />}
         />
         <Route
           path="/login"
@@ -91,4 +83,4 @@ class NavBar extends React.Component {
   }
 }
 
-export { NavBar };
+export { MainNav };

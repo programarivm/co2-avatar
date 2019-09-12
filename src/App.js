@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import { NavBar } from "./components/NavBar.js";
+import { MainNav } from "./components/MainNav.js";
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <NavBar />
-        <footer className="text-center m-4">
-          <small>CO2 footprint says: Have an awesome day!</small>
-        </footer>
+      <div className="App">
+        <MainNav />
       </div>
     );
   }

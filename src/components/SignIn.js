@@ -4,6 +4,7 @@ import {
   Container, Col, Row, Form,
   FormGroup, Input
 } from 'reactstrap';
+import './SignIn.css';
 
 class SignIn extends Component {
   constructor(props) {
@@ -24,13 +25,13 @@ class SignIn extends Component {
 
   render() {
     return (
-      <Container>
+      <Container className="SignIn mt-5">
         <Row>
           <Col lg="3"></Col>
           <Col lg="6">
             <Card>
               <CardBody>
-                <h4>Log in to your account</h4>
+                <p className="text-center"><b>Log in to your account</b></p>
                 <Form className="form" onSubmit={ (e) => this.submitForm(e) }>
                   <FormGroup>
                     <Input
@@ -48,7 +49,7 @@ class SignIn extends Component {
                       placeholder="Password"
                     />
                   </FormGroup>
-                  <Button>Log in</Button>
+                  <Button color="primary" block>Log in</Button>
                 </Form>
               </CardBody>
             </Card>
