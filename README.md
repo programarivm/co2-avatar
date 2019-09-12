@@ -48,3 +48,7 @@ Add the following entry to your `/etc/hosts` file:
 Open your favourite web browser and type in the address bar:
 
     https://co2.today
+
+Also, to test the api:
+
+    curl --insecure -X POST -F 'email=bob-smith@foo.com' -F 'password=password' https://api.co2.today/auth

@@ -17,8 +17,10 @@ if ($isVerified) {
         'exp' => time() + (60 * 480), // 8 hours
     ];
     $jwt = JWT::encode($token, getenv('JWT_SECRET'));
+    $body = ['message' => 'Success'];
     http_response_code(200);
     setcookie('access_token', $jwt);
+    print_r(json_encode($body, true));
 } else {
     $body = ['message' => 'Unauthorized'];
     http_response_code(401);
