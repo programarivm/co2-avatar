@@ -33,6 +33,12 @@ Copy the following `.env` into the app's root directory:
 
 ### 4. Local Set up
 
-Add the following entry to your `/etc/hosts` file:
+Add the followin entry to your `/etc/hosts` file:
 
     172.21.0.1      co2.today
+
+### 5. Run the App
+
+Open your favourite web browser and type in the address bar:
+
+    https://co2.today
