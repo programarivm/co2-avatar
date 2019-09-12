@@ -37,7 +37,7 @@ Reset the database:
 
 ### 4. Local Set up
 
-Add the followin entry to your `/etc/hosts` file:
+Add the following entry to your `/etc/hosts` file:
 
     172.21.0.1      co2.today
 
