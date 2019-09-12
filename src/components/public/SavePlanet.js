@@ -4,10 +4,10 @@ import {
   CardTitle, Container, Row, Col
 } from 'reactstrap';
 import { Footer } from "./Footer.js";
-import earth from '../assets/images/earth.svg';
-import london from '../assets/images/london.jpg';
-import bees from '../assets/images/bees.jpg';
-import arctic from '../assets/images/arctic.jpeg';
+import earth from '../../assets/images/earth.svg';
+import london from '../../assets/images/london.jpg';
+import bees from '../../assets/images/bees.jpg';
+import arctic from '../../assets/images/arctic.jpeg';
 import './SavePlanet.css';
 
 class SavePlanet extends React.Component {

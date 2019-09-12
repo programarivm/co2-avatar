@@ -7,7 +7,7 @@ import { Link, Route, Redirect } from 'react-router-dom';
 import { Home } from "./Home.js";
 import { SavePlanet } from "./SavePlanet.js";
 import { SignIn } from "./SignIn.js";
-import logo from '../assets/images/logo.png';
+import logo from '../../assets/images/logo.png';
 import './MainNav.css';
 
 class MainNav extends React.Component {
@@ -53,7 +53,7 @@ class MainNav extends React.Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/features">
+                <NavLink tag={Link} to="/save-the-planet">
                   Save the planet
                 </NavLink>
               </NavItem>
@@ -71,7 +71,7 @@ class MainNav extends React.Component {
           render={(props) => <Home {...props} />}
         />
         <Route
-          path="/features"
+          path="/save-the-planet"
           render={(props) => <SavePlanet {...props} />}
         />
         <Route
