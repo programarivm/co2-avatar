@@ -23,6 +23,8 @@ Copy the following `.env` into the app's root directory:
 
     CO2_NGINX_HOST=172.21.0.1
 
+    JWT_SECRET=@NJ-fv=kb$de>p;4n5uP@TUTd-msSb(3,d(/tz:4@{B+"k__#ug$dRVy6>8G/q29
+
 Reset the database:
 
     docker exec -it co2_php_fpm php cli/reset-database.php
