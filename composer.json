@@ -1,0 +1,14 @@
+{
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Co2\\": "api/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    },
+    "require": {
+        "vlucas/phpdotenv": "^3.4"
+    }
+}
