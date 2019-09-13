@@ -17,7 +17,7 @@ class AppStore extends EventEmitter {
 
 	logIn() {
 		console.log('TODO...');
-		fetch("https://api.co2.today/auth", {
+		fetch("http://api.co2.today/auth", {
 			method: "POST"
 		}).then(res => res.json())
 			.then(response => console.log('Success:', JSON.stringify(response)))

@@ -29,30 +29,18 @@ Reset the database:
 
     docker exec -it co2_php_fpm php cli/reset-database.php
 
-### 3. Generate the SSL Certificate
-
-This is how to create the certificates:
-
-    cd docker/nginx/ssl
-    openssl genrsa -des3 -out co2.today.pem 2048
-    openssl req -new -key co2.today.pem -out co2.today.csr -config openssl.cnf
-    openssl x509 -req -days 365 -in co2.today.csr -signkey co2.today.pem -out co2.today.crt
-    openssl rsa -in co2.today.pem -out co2.today.key
-
-OpenSSL is been set up in `docker/nginx/ssl/openssl.cnf` to use alternative names because we want to use two different domains: `co2.today` and `api.co2.today`.
-
-### 4. Local Set up
+### 3. Local Set up
 
 Add the following entry to your `/etc/hosts` file:
 
     172.21.0.1      co2.today
 
-### 5. Run the App
+### 4. Run the App
 
 Open your favourite web browser and type in the address bar:
 
-    https://co2.today
+    http://co2.today
 
 Also, to test the api:
 
-    curl --insecure -X POST -F 'email=bob-smith@foo.com' -F 'password=password' https://api.co2.today/auth
+    curl --insecure -X POST -F 'email=bob-smith@foo.com' -F 'password=password' http://api.co2.today/auth
