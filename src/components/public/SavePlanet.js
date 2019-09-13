@@ -19,18 +19,20 @@ class SavePlanet extends React.Component {
             <Col lg="8">
               <h1 className="mt-5">Carbon Footprint Calculator</h1>
               <h5>We help you raise awareness about how much carbon dioxide (CO2) you are producing on a daily basis.</h5>
-              <h5>Learn how to reduce your carbon footprint right now, and save the planet by sharing this with your friends.</h5>
+              <h5>Learn how to reduce your carbon footprint right now since there is no time to waste anymore.</h5>
               <Button className="mt-2" color="secondary">Save the planet today!</Button>
             </Col>
             <Col lg="4">
-              <img src={earth} className="img-fluid" alt="earth" />
+              <figure className="swing">
+                <img src={earth} className="img-fluid" alt="earth" />
+              </figure>
             </Col>
           </Row>
-          <Row className="mt-4 pb-4">
+          <Row className="mt-4 pb-5">
             <Col lg="12">
               <hr/>
               <h1 className="text-center mt-4">Did you know?</h1>
-              <h2 className="text-center">The human species may die off sooner than you would expect...</h2>
+              <h2 className="text-center">Human species may die off sooner than you'd expect...</h2>
               <Row>
                 <Col lg="4">
                   <a href="https://www.nationalgeographic.co.uk/environment-and-conservation201907londons-climate-will-resemble-barcelonas-2050-study-reveals" target="_blank" rel="noopener noreferrer">
