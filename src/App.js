@@ -10,11 +10,16 @@ class App extends Component {
     this.state = AppStore.getState();
   }
 
+  componentDidMount() {
+    AppStore.on("logIn", () => {
+      this.setState(AppStore.getState());
+    });
+  }
+
   render() {
-    let isAuthenticated = false;
     return (
       <div className="App">
-        { isAuthenticated ? <PrivateApp /> : <PublicApp /> }
+        { this.state.authenticated ? <PrivateApp /> : <PublicApp /> }
       </div>
     );
   }

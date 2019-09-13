@@ -23,8 +23,8 @@ if (empty($result)) {
     ];
     $jwt = JWT::encode($token, getenv('JWT_SECRET'));
     $body = ['access_token' => $jwt];
-    http_response_code(200);
-    setcookie('access_token', $jwt, time() + 60);
+    http_response_code(204);
+    setcookie('access_token', $jwt);
 } else {
     $body = ['message' => 'Unauthorized'];
     http_response_code(401);

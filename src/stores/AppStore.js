@@ -8,7 +8,7 @@ class AppStore extends EventEmitter {
 	constructor() {
 		super();
 		this.state = {
-			connected: false
+			'authenticated': false
 		};
 		AppDispatcher.register(this.handleActions.bind(this));
 	}
@@ -25,9 +25,10 @@ class AppStore extends EventEmitter {
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify(credentials)
-		}).then(res => res.json());
-
-		this.emit("logIn");
+		}).then(() => {
+			this.state.authenticated = true;
+			this.emit("logIn");
+		});
 	}
 
 	handleActions(action) {
