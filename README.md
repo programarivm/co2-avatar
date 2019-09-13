@@ -31,11 +31,15 @@ Reset the database:
 
 ### 3. Generate the SSL Certificate
 
+This is how to create the certificates:
+
     cd docker/nginx/ssl
     openssl genrsa -des3 -out co2.today.pem 2048
-    openssl req -new -key co2.today.pem -out co2.today.csr
+    openssl req -new -key co2.today.pem -out co2.today.csr -config openssl.cnf
     openssl x509 -req -days 365 -in co2.today.csr -signkey co2.today.pem -out co2.today.crt
     openssl rsa -in co2.today.pem -out co2.today.key
+
+OpenSSL is been set up in `docker/nginx/ssl/openssl.cnf` to use alternative names because we want to use two different domains: `co2.today` and `api.co2.today`.
 
 ### 4. Local Set up
 
