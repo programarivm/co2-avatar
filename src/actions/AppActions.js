@@ -2,9 +2,10 @@ import AppDispatcher from "../dispatcher/AppDispatcher.js";
 import ActionTypes from '../constants/AppConstants';
 
 class AppActions {
-	logIn() {
+	logIn(data) {
 		AppDispatcher.dispatch({
-			type: ActionTypes.LOG_IN
+			type: ActionTypes.LOG_IN,
+			credentials: data
 		});
 	}
 

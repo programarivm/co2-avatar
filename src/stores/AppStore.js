@@ -2,6 +2,8 @@ import ActionTypes from '../constants/AppConstants';
 import AppDispatcher from "../dispatcher/AppDispatcher.js";
 import { EventEmitter } from 'events';
 
+const BASE_URL = 'http://api.co2.today';
+
 class AppStore extends EventEmitter {
 	constructor() {
 		super();
@@ -15,13 +17,15 @@ class AppStore extends EventEmitter {
 		return this.state;
 	}
 
-	logIn() {
-		console.log('TODO...');
-		fetch("http://api.co2.today/auth", {
-			method: "POST"
-		}).then(res => res.json())
-			.then(response => console.log('Success:', JSON.stringify(response)))
-			.catch(error => console.error('Error:', error));
+	logIn(credentials) {
+		fetch(BASE_URL + '/auth', {
+			method: 'POST',
+			credentials: 'include',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(credentials)
+		}).then(res => res.json());
 
 		this.emit("logIn");
 	}
@@ -29,7 +33,7 @@ class AppStore extends EventEmitter {
 	handleActions(action) {
 		switch (action.type) {
 			case ActionTypes.LOG_IN:
-				this.logIn();
+				this.logIn(action.credentials);
 				break;
 			default:
         // do nothing

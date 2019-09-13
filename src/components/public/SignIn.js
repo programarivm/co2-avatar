@@ -11,18 +11,21 @@ class SignIn extends Component {
   constructor(props) {
     super(props);
       this.state = {
-      'email': '',
-      'password': '',
-      validate: {
-        emailState: '',
-      },
+        'email': '',
+        'password': ''
     }
     this.logIn = this.logIn.bind(this);
   }
 
+  handleChange = event => {
+    this.setState({
+      [event.target.id]: event.target.value
+    });
+  }
+
   logIn(e) {
-    e.preventDefault();
-    AppActions.logIn();
+    // e.preventDefault();
+    AppActions.logIn(this.state);
   }
 
   render() {
@@ -41,6 +44,7 @@ class SignIn extends Component {
                       name="email"
                       id="email"
                       placeholder="Email address"
+                      onChange={this.handleChange}
                     />
                   </FormGroup>
                   <FormGroup>
@@ -49,6 +53,7 @@ class SignIn extends Component {
                       name="password"
                       id="password"
                       placeholder="Password"
+                      onChange={this.handleChange}
                     />
                   </FormGroup>
                   <Button color="primary" onClick={this.logIn} block>Log in</Button>

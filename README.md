@@ -41,6 +41,8 @@ Open your favourite web browser and type in the address bar:
 
     http://co2.today
 
-Also, to test the api:
+Also, to test the API:
 
-    curl --insecure -X POST -F 'email=bob-smith@foo.com' -F 'password=password' http://api.co2.today/auth
+    curl -X POST -H "Content-Type: application/json" \
+      -d '{"email":"foo","password":"bar"}' \
+      http://api.co2.today/auth
