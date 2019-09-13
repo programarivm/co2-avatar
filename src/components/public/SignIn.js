@@ -4,6 +4,7 @@ import {
   Container, Col, Row, Form,
   FormGroup, Input
 } from 'reactstrap';
+import AppActions from '../../actions/AppActions.js';
 import './SignIn.css';
 
 class SignIn extends Component {
@@ -16,11 +17,12 @@ class SignIn extends Component {
         emailState: '',
       },
     }
+    this.logIn = this.logIn.bind(this);
   }
 
-  submitForm(e) {
+  logIn(e) {
     e.preventDefault();
-    console.log(`Email: ${ this.state.email }`)
+    AppActions.logIn();
   }
 
   render() {
@@ -32,7 +34,7 @@ class SignIn extends Component {
             <Card>
               <CardBody>
                 <p className="text-center"><b>Log in to your account</b></p>
-                <Form className="form" onSubmit={ (e) => this.submitForm(e) }>
+                <Form className="form" onSubmit={ (e) => this.logIn(e) }>
                   <FormGroup>
                     <Input
                       type="email"
@@ -49,7 +51,7 @@ class SignIn extends Component {
                       placeholder="Password"
                     />
                   </FormGroup>
-                  <Button color="primary" block>Log in</Button>
+                  <Button color="primary" onClick={this.logIn} block>Log in</Button>
                 </Form>
               </CardBody>
             </Card>
