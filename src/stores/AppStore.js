@@ -32,6 +32,7 @@ class AppStore extends EventEmitter {
 	}
 
 	logOut() {
+		// TODO: remove access_token cookie
 		this.state.authenticated = false;
 		this.emit("logOut");
 	}
