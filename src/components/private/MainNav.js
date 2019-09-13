@@ -5,6 +5,7 @@ import {
   NavLink } from 'reactstrap';
 import { Link, Route } from 'react-router-dom';
 import { Dashboard } from "./Dashboard.js";
+import AppActions from '../../actions/AppActions.js';
 import logo from '../../assets/images/logo.png';
 import './MainNav.css';
 
@@ -17,6 +18,7 @@ class MainNav extends React.Component {
       isOpen: false
     };
     this.toggle = this.toggle.bind(this);
+    this.logOut = this.logOut.bind(this);
   }
 
   componentDidMount() {
@@ -35,6 +37,10 @@ class MainNav extends React.Component {
     }
   }
 
+  logOut() {
+    AppActions.logOut();
+  }
+
   render() {
     return (
       <div>
@@ -48,6 +54,11 @@ class MainNav extends React.Component {
               <NavItem>
                 <NavLink tag={Link} to="/dashboard">
                   Dashboard
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} onClick={this.logOut}>
+                  Sign out
                 </NavLink>
               </NavItem>
             </Nav>

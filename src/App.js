@@ -14,6 +14,10 @@ class App extends Component {
     AppStore.on("logIn", () => {
       this.setState(AppStore.getState());
     });
+    AppStore.on("logOut", () => {
+      // TODO: remove access_token cookie
+      this.setState(AppStore.getState());
+    });
   }
 
   render() {

@@ -31,10 +31,18 @@ class AppStore extends EventEmitter {
 		});
 	}
 
+	logOut() {
+		this.state.authenticated = false;
+		this.emit("logOut");
+	}
+
 	handleActions(action) {
 		switch (action.type) {
 			case ActionTypes.LOG_IN:
 				this.logIn(action.credentials);
+				break;
+			case ActionTypes.LOG_OUT:
+				this.logOut();
 				break;
 			default:
         // do nothing
