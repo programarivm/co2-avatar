@@ -14,7 +14,7 @@ class Footer extends Component {
           <Col lg="4">
             <p>
               <b>CO2 Footprint</b><br/>
-              Carbon Footprint Calculator Limited,<br/>
+              Company Name Goes Here Limited,<br/>
               Registered in England and Wales,<br/>
               Company Number: 1234567890
             </p>
