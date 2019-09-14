@@ -9,6 +9,7 @@ try {
     $body = ['message' => 'Unauthorized'];
     http_response_code(401);
     print_r(json_encode($body, true));
+    exit;
 }
 
 $sql = "SELECT * FROM points WHERE id_user={$jwt->id}";
