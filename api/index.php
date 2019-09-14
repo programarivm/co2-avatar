@@ -10,4 +10,6 @@ $dotenv->load();
 switch (true) {
     case '/auth' === $_SERVER['REQUEST_URI']:
         require_once APP_PATH.'/api/endpoints/auth.php';
+    case '/points' === $_SERVER['REQUEST_URI']:
+        require_once APP_PATH.'/api/endpoints/points.php';
 }

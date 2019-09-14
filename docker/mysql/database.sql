@@ -15,4 +15,16 @@ CREATE TABLE IF NOT EXISTS users (
     PRIMARY KEY (id)
 ) ENGINE=InnoDB;
 
+CREATE TABLE IF NOT EXISTS points (
+  id mediumint UNSIGNED NOT NULL AUTO_INCREMENT,
+  food tinyint UNSIGNED NOT NULL,
+  residential tinyint UNSIGNED NOT NULL,
+  transport tinyint UNSIGNED NOT NULL,
+  created_at DATETIME DEFAULT '2019-01-01 00:00:00',
+  id_user mediumint UNSIGNED NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
 INSERT INTO users(email, password) VALUES ('bob-smith@foo.com', '$2y$12$AOR2qZ1UOOoSDahahCkRlut8q6j66IKPmbzYIYMWx678qcGg9uQga');
+INSERT INTO points(food, residential, transport, id_user) VALUES (10, 15, 5, 1);
