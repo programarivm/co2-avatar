@@ -11,10 +11,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    AppStore.on("logIn", () => {
+    AppStore.on("log_in_succeeded", () => {
       this.setState(AppStore.getState());
     });
-    AppStore.on("logOut", () => {
+    AppStore.on("log_out", () => {
       this.setState(AppStore.getState());
     });
   }

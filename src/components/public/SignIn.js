@@ -5,27 +5,39 @@ import {
   FormGroup, Input
 } from 'reactstrap';
 import AppActions from '../../actions/AppActions.js';
+import AppStore from '../../stores/AppStore.js';
 import './SignIn.css';
 
 class SignIn extends Component {
   constructor(props) {
     super(props);
       this.state = {
-        'email': '',
-        'password': ''
+        'credentials': {
+          'email': '',
+          'password': ''
+        },
+        'validation': null
     }
     this.logIn = this.logIn.bind(this);
   }
 
-  handleChange = event => {
-    this.setState({
-      [event.target.id]: event.target.value
+  componentDidMount() {
+    AppStore.on("log_in_failed", () => {
+      let validation = {...this.state.validation};
+      validation = 'The username and password that you entered did not match our records. Please double-check and try again.';
+      this.setState({validation});
     });
+  }
+
+  handleChange = event => {
+    let credentials = {...this.state.credentials};
+    credentials[event.target.id] = event.target.value;
+    this.setState({credentials});
   }
 
   logIn(e) {
     // e.preventDefault();
-    AppActions.logIn(this.state);
+    AppActions.logIn(this.state.credentials);
   }
 
   render() {
@@ -37,6 +49,7 @@ class SignIn extends Component {
             <Card>
               <CardBody>
                 <p className="text-center"><b>Log in to your account</b></p>
+                <p className="text-danger">{this.state.validation}</p>
                 <Form className="form" onSubmit={ (e) => this.logIn(e) }>
                   <FormGroup>
                     <Input

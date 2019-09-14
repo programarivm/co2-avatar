@@ -25,16 +25,26 @@ class AppStore extends EventEmitter {
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify(credentials)
-		}).then(() => {
-			this.state.authenticated = true;
-			this.emit("logIn");
+		}).then((res) => {
+			switch (res.status) {
+				case 204:
+					this.state.authenticated = true;
+					this.emit("log_in_succeeded");
+					break;
+				case 401:
+					this.emit("log_in_failed");
+					break;
+				default:
+					// do nothing
+					break;
+			}
 		});
 	}
 
 	logOut() {
 		// TODO: remove access_token cookie
 		this.state.authenticated = false;
-		this.emit("logOut");
+		this.emit("log_out");
 	}
 
 	handleActions(action) {
