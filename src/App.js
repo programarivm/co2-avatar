@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        { this.state.authenticated ? <PrivateApp /> : <PublicApp /> }
+        { this.state.authenticated ? <PrivateApp path="/dashboard" /> : <PublicApp path="/" /> }
       </div>
     );
   }
