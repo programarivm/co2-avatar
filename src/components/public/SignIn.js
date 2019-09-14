@@ -24,7 +24,7 @@ class SignIn extends Component {
   componentDidMount() {
     AppStore.on("log_in_failed", () => {
       let validation = {...this.state.validation};
-      validation = 'The username and password that you entered did not match our records. Please double-check and try again.';
+      validation = 'The username and password that you entered did not match our records. Please try again.';
       this.setState({validation});
     });
   }
@@ -36,8 +36,8 @@ class SignIn extends Component {
   }
 
   logIn(e) {
-    // e.preventDefault();
     AppActions.logIn(this.state.credentials);
+    e.preventDefault();
   }
 
   render() {
@@ -58,6 +58,7 @@ class SignIn extends Component {
                       id="email"
                       placeholder="Email address"
                       onChange={this.handleChange}
+                      required
                     />
                   </FormGroup>
                   <FormGroup>
@@ -67,9 +68,10 @@ class SignIn extends Component {
                       id="password"
                       placeholder="Password"
                       onChange={this.handleChange}
+                      required
                     />
                   </FormGroup>
-                  <Button color="primary" onClick={this.logIn} block>Log in</Button>
+                  <Button color="primary" block>Log in</Button>
                 </Form>
               </CardBody>
             </Card>
