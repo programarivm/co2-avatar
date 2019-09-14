@@ -1,11 +1,16 @@
 import React from 'react';
 import {
-  Container, Row, Col
+  Container, Row, Col, Table
 } from 'reactstrap';
 
 const BASE_URL = 'http://api.co2.today';
 
 class Dashboard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   componentDidMount() {
     fetch(BASE_URL + '/points', {
       method: 'GET',
@@ -13,20 +18,10 @@ class Dashboard extends React.Component {
       headers: {
         'Content-Type': 'application/json'
       }
-    }).then((res) => {
-      switch (res.status) {
-        case 200:
-          // TODO ...
-          console.log(res);
-          break;
-        case 401:
-          // TODO ...
-          break;
-        default:
-          // do nothing
-          break;
-      }
-    });
+    }).then(res => res.json())
+      .then(res => {
+        this.setState(res);
+      });
   }
 
   render() {
@@ -35,7 +30,22 @@ class Dashboard extends React.Component {
         <Container className="Dashboard">
           <Row>
             <Col lg="12">
-              <h1>TODO: Dashboard</h1>
+              <Table>
+                <thead>
+                <tr>
+                  <th>Food</th>
+                  <th>Residential</th>
+                  <th>Transport</th>
+                </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{this.state.food}</td>
+                    <td>{this.state.residential}</td>
+                    <td>{this.state.transport}</td>
+                  </tr>
+                </tbody>
+              </Table>
             </Col>
           </Row>
         </Container>
