@@ -1,8 +1,10 @@
 import ActionTypes from '../constants/AppConstants';
 import AppDispatcher from "../dispatcher/AppDispatcher.js";
 import { EventEmitter } from 'events';
+import Cookies from 'universal-cookie';
 
 const BASE_URL = 'http://api.co2.today';
+const cookies = new Cookies();
 
 class AppStore extends EventEmitter {
 	constructor() {
@@ -42,7 +44,7 @@ class AppStore extends EventEmitter {
 	}
 
 	logOut() {
-		// TODO: remove access_token cookie
+		cookies.remove('access_token', { domain: 'api.co2.today', path: '/' });
 		this.state.authenticated = false;
 		this.emit("log_out");
 	}
