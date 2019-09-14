@@ -4,7 +4,7 @@
 	<img src="https://github.com/programarivm/CO2-footprint/blob/master/src/assets/images/earth-200.png" />
 </p>
 
-Carbon footprint calculator.
+Carbon footprint calculator helps you raise awareness about how much carbon dioxide (CO2) you are producing on a daily basis. Learn how to reduce your carbon footprint right now since there is no time to waste anymore.
 
 ### 1. Build the Docker Containers
 
