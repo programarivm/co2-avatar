@@ -7,7 +7,6 @@ const BASE_URL = 'http://api.co2.today';
 
 class Dashboard extends React.Component {
   componentDidMount() {
-    console.log('hello there');
     fetch(BASE_URL + '/points', {
       method: 'GET',
       credentials: 'include',
