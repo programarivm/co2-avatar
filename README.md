@@ -1,6 +1,6 @@
 # CO2 Footprint
 
-Carbon footprint calculator helps you raise awareness about how much carbon dioxide (CO2) you are producing on a daily basis. Learn how to reduce your carbon footprint right now since there is no time to waste anymore.
+This app helps you raise awareness about how much carbon dioxide (CO2) you are producing on a daily basis. Learn how to reduce your carbon footprint right now since there is no time to waste anymore.
 
 ### 1. Build the Docker Containers
 

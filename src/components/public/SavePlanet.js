@@ -17,7 +17,7 @@ class SavePlanet extends React.Component {
         <Container className="SavePlanet mt-5 mb-5">
           <Row>
             <Col lg="8">
-              <h1 className="mt-5">Carbon Footprint Calculator</h1>
+              <h1 className="mt-5">Carbon Footprint</h1>
               <h5>We help you raise awareness about how much carbon dioxide (CO2) you are producing on a daily basis.</h5>
               <h5>Learn how to reduce your carbon footprint right now since there is no time to waste anymore.</h5>
               <Button className="mt-2" color="secondary">Save the planet today!</Button>
