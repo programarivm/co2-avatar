@@ -5,6 +5,7 @@ import {
   NavLink } from 'reactstrap';
 import { Link, Route } from 'react-router-dom';
 import { Dashboard } from "./Dashboard.js";
+import { TakeTest } from "./TakeTest.js";
 import AppActions from '../../actions/AppActions.js';
 import logo from '../../assets/images/logo.png';
 import './MainNav.css';
@@ -57,6 +58,11 @@ class MainNav extends React.Component {
                 </NavLink>
               </NavItem>
               <NavItem>
+                <NavLink tag={Link} to="/take-the-test">
+                  Take the test
+                </NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink tag={Link} onClick={this.logOut}>
                   Sign out
                 </NavLink>
@@ -67,6 +73,10 @@ class MainNav extends React.Component {
         <Route
           path="/dashboard"
           render={(props) => <Dashboard {...props} />}
+        />
+        <Route
+          path="/take-the-test"
+          render={(props) => <TakeTest {...props} />}
         />
       </div>
     );
