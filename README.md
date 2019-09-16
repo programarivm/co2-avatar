@@ -29,15 +29,19 @@ Reset the database:
 
     docker exec -it co2_php_fpm php cli/reset-database.php
 
-### 3. Local Set up
+### 3. Build the React App
+
+The following command builds the app for production to the build folder:
+
+    npm run build
+
+### 4. Local Set up
 
 Add the following entry to your `/etc/hosts` file:
 
     172.21.0.1      co2.today
 
-### 4. Run the App
-
-Open your favourite web browser and type in the address bar:
+Now open your favourite web browser and type in the address bar:
 
     http://co2.today
 
