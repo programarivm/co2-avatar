@@ -47,7 +47,8 @@ class TakeTest extends React.Component {
       credentials: 'include',
       headers: {
         'Content-Type': 'application/json'
-      }
+      },
+      body: JSON.stringify(this.state)
     }).then(res => {
       this.props.history.push('/dashboard');
     });
@@ -218,7 +219,7 @@ class TakeTest extends React.Component {
                   min={0}
                   max={100}
                   values={this.state.transport.q03}
-                  onChange={values => this.setState({ food: { ...this.state.transport, q03: values } })}
+                  onChange={values => this.setState({ transport: { ...this.state.transport, q03: values } })}
                   renderTrack={({ props, children }) => (
                     <div
                       {...props}
