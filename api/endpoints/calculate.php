@@ -26,7 +26,7 @@ $sql = "UPDATE points SET
         transport = {$results['transport']}
     WHERE id_user = {$jwt->id}";
 
-$result = DB::getInstance()->query($sql)->fetch_array(MYSQLI_ASSOC);
+$result = DB::getInstance()->query($sql);
 
 if ($result) {
     $body = ['message' => 'Success'];
