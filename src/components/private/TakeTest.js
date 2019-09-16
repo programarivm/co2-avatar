@@ -26,11 +26,17 @@ class TakeTest extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      values: {
+      food: {
         q01: [50],
         q02: [50],
         q03: [50]
-    }};
+      },
+      transport: {
+        q01: [50],
+        q02: [50],
+        q03: [50]
+      }
+    };
     this.seeResults = this.seeResults.bind(this);
   }
 
@@ -55,14 +61,14 @@ class TakeTest extends React.Component {
         <Container className="TakeTest">
           <Row>
             <Col lg="12">
-              <Row>
-                <h5 className="m-4">You prefer to walk instead of drive to work if the weather allows it.</h5>
+              <Row className="mt-4">
+                <h5 className="m-4">Junk food is rubbish.</h5>
                 <Range
                   step={0.1}
                   min={0}
                   max={100}
-                  values={this.state.values.q01}
-                  onChange={values => this.setState({ values: { ...this.state.values, q01: values} })}
+                  values={this.state.food.q01}
+                  onChange={values => this.setState({ food: { ...this.state.food, q01: values } })}
                   renderTrack={({ props, children }) => (
                     <div
                       {...props}
@@ -86,13 +92,13 @@ class TakeTest extends React.Component {
                 />
               </Row>
               <Row className="mt-4">
-                <h5 className="m-4">You love junk food.</h5>
+                <h5 className="m-4">You prefer to walk instead of drive to work if the weather allows it.</h5>
                 <Range
                   step={0.1}
                   min={0}
                   max={100}
-                  values={this.state.values.q02}
-                  onChange={values => this.setState({ values: { ...this.state.values, q02: values} })}
+                  values={this.state.transport.q01}
+                  onChange={values => this.setState({ transport: { ...this.state.transport, q01: values } })}
                   renderTrack={({ props, children }) => (
                     <div
                       {...props}
@@ -121,8 +127,98 @@ class TakeTest extends React.Component {
                   step={0.1}
                   min={0}
                   max={100}
-                  values={this.state.values.q03}
-                  onChange={values => this.setState({ values: { ...this.state.values, q03: values} })}
+                  values={this.state.food.q02}
+                  onChange={values => this.setState({ food: { ...this.state.food, q02: values } })}
+                  renderTrack={({ props, children }) => (
+                    <div
+                      {...props}
+                      style={{
+                        ...props.style,
+                        ...track.style
+                      }}
+                    >
+                      {children}
+                    </div>
+                  )}
+                  renderThumb={({ props }) => (
+                    <div
+                      {...props}
+                      style={{
+                        ...props.style,
+                        ...thumb.style
+                      }}
+                    />
+                  )}
+                />
+              </Row>
+              <Row className="mt-4">
+                <h5 className="m-4">You avoid taking a plane because you know it produces a lot of carbon emissions.</h5>
+                <Range
+                  step={0.1}
+                  min={0}
+                  max={100}
+                  values={this.state.transport.q02}
+                  onChange={values => this.setState({ transport: { ...this.state.transport, q02: values } })}
+                  renderTrack={({ props, children }) => (
+                    <div
+                      {...props}
+                      style={{
+                        ...props.style,
+                        ...track.style
+                      }}
+                    >
+                      {children}
+                    </div>
+                  )}
+                  renderThumb={({ props }) => (
+                    <div
+                      {...props}
+                      style={{
+                        ...props.style,
+                        ...thumb.style
+                      }}
+                    />
+                  )}
+                />
+              </Row>
+              <Row className="mt-4">
+                <h5 className="m-4">You are aware about the calories in the foods you eat.</h5>
+                <Range
+                  step={0.1}
+                  min={0}
+                  max={100}
+                  values={this.state.food.q03}
+                  onChange={values => this.setState({ food: { ...this.state.food, q03: values } })}
+                  renderTrack={({ props, children }) => (
+                    <div
+                      {...props}
+                      style={{
+                        ...props.style,
+                        ...track.style
+                      }}
+                    >
+                      {children}
+                    </div>
+                  )}
+                  renderThumb={({ props }) => (
+                    <div
+                      {...props}
+                      style={{
+                        ...props.style,
+                        ...thumb.style
+                      }}
+                    />
+                  )}
+                />
+              </Row>
+              <Row className="mt-4">
+                <h5 className="m-4">Walking and cycling are great for the mind and body.</h5>
+                <Range
+                  step={0.1}
+                  min={0}
+                  max={100}
+                  values={this.state.transport.q03}
+                  onChange={values => this.setState({ food: { ...this.state.transport, q03: values } })}
                   renderTrack={({ props, children }) => (
                     <div
                       {...props}
