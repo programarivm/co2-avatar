@@ -9,7 +9,7 @@ $post = json_decode($input, TRUE);
 $email = DB::getInstance()->escape($post['email']);
 $password = DB::getInstance()->escape($post['password']);
 
-$sql = "SELECT id, password FROM users WHERE email='$email'";
+$sql = "SELECT id, password FROM users WHERE email = '$email'";
 $result = DB::getInstance()->query($sql)->fetch_array(MYSQLI_ASSOC);
 
 if (empty($result)) {
@@ -23,7 +23,6 @@ if (empty($result)) {
         'exp' => time() + (60 * 480), // 8 hours
     ];
     $jwt = JWT::encode($token, getenv('JWT_SECRET'));
-    $body = ['access_token' => $jwt];
     http_response_code(204);
     setcookie('access_token', $jwt);
 } else {
