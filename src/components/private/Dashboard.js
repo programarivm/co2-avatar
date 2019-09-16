@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Container, Row, Col, Table
+  Container, Row, Col, Progress
 } from 'reactstrap';
 
 const BASE_URL = 'http://api.co2.today';
@@ -25,27 +25,24 @@ class Dashboard extends React.Component {
   }
 
   render() {
+    let percent = {
+      food: Math.round(parseInt(this.state.food) * 100 / 300),
+      residential: Math.round(parseInt(this.state.residential) * 100 / 300),
+      transport: Math.round(parseInt(this.state.transport) * 100 / 300)
+    };
+
     return (
       <div>
         <Container className="Dashboard">
+          <h1 className="mt-5">Score: {parseInt(this.state.food) + parseInt(this.state.residential) + parseInt(this.state.transport)} points</h1>
           <Row>
             <Col lg="12">
-              <Table>
-                <thead>
-                <tr>
-                  <th>Food</th>
-                  <th>Residential</th>
-                  <th>Transport</th>
-                </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>{this.state.food}</td>
-                    <td>{this.state.residential}</td>
-                    <td>{this.state.transport}</td>
-                  </tr>
-                </tbody>
-              </Table>
+              <div className="mt-2 text-center">Food {percent.food}%</div>
+              <Progress className="mt-2" color="info" value={percent.food} />
+              <div className="mt-5 text-center">Residential {percent.residential}%</div>
+              <Progress className="mt-2" color="warning" value={percent.residential} />
+              <div className="mt-5 text-center">Transport {percent.transport}%</div>
+              <Progress className="mt-2" color="success" value={percent.transport} />
             </Col>
           </Row>
         </Container>

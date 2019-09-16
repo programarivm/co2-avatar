@@ -65,9 +65,10 @@ class TakeTest extends React.Component {
     return (
       <div>
         <Container className="TakeTest">
+          <h1 className="mt-5">Slide the big squares</h1>
           <Row>
             <Col lg="12">
-              <Row className="mt-4">
+              <Row className="mt-5">
                 <h5 className="m-4">Junk food is rubbish.</h5>
                 <Range
                   step={0.1}
@@ -97,7 +98,7 @@ class TakeTest extends React.Component {
                   )}
                 />
               </Row>
-              <Row className="mt-4">
+              <Row className="mt-5">
                 <h5 className="m-4">You know a few handy tricks to keep your house warm in winter.</h5>
                 <Range
                   step={0.1}
@@ -127,7 +128,7 @@ class TakeTest extends React.Component {
                   )}
                 />
               </Row>
-              <Row className="mt-4">
+              <Row className="mt-5">
                 <h5 className="m-4">Second-hand clothes are good for you.</h5>
                 <Range
                   step={0.1}
@@ -157,7 +158,7 @@ class TakeTest extends React.Component {
                   )}
                 />
               </Row>
-              <Row className="mt-4">
+              <Row className="mt-5">
                 <h5 className="m-4">When the weather allows it, you prefer to walk instead of drive to work.</h5>
                 <Range
                   step={0.1}
@@ -187,7 +188,7 @@ class TakeTest extends React.Component {
                   )}
                 />
               </Row>
-              <Row className="mt-4">
+              <Row className="mt-5">
                 <h5 className="m-4">Lights are turned off in your house if they don't have to be on.</h5>
                 <Range
                   step={0.1}
@@ -217,7 +218,7 @@ class TakeTest extends React.Component {
                   )}
                 />
               </Row>
-              <Row className="mt-4">
+              <Row className="mt-5">
                 <h5 className="m-4">You never throw away the food you buy.</h5>
                 <Range
                   step={0.1}
@@ -247,7 +248,7 @@ class TakeTest extends React.Component {
                   )}
                 />
               </Row>
-              <Row className="mt-4">
+              <Row className="mt-5">
                 <h5 className="m-4">You avoid taking a plane because you know it produces a lot of carbon emissions.</h5>
                 <Range
                   step={0.1}
@@ -277,7 +278,7 @@ class TakeTest extends React.Component {
                   )}
                 />
               </Row>
-              <Row className="mt-4">
+              <Row className="mt-5">
                 <h5 className="m-4">You are usually aware about the calories in the foods you eat.</h5>
                 <Range
                   step={0.1}
@@ -307,7 +308,7 @@ class TakeTest extends React.Component {
                   )}
                 />
               </Row>
-              <Row className="mt-4">
+              <Row className="mt-5">
                 <h5 className="m-4">Walking and cycling are great for your mind and body.</h5>
                 <Range
                   step={0.1}
@@ -337,8 +338,9 @@ class TakeTest extends React.Component {
                   )}
                 />
               </Row>
-              <Row className="mt-5">
+              <Row className="m-5">
                 <Button
+                  className="btn-lg"
                   color="primary"
                   onClick={this.seeResults}
                   block
