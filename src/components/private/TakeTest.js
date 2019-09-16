@@ -35,6 +35,11 @@ class TakeTest extends React.Component {
         q01: [50],
         q02: [50],
         q03: [50]
+      },
+      residential: {
+        q01: [50],
+        q02: [50],
+        q03: [50]
       }
     };
     this.seeResults = this.seeResults.bind(this);
@@ -93,13 +98,103 @@ class TakeTest extends React.Component {
                 />
               </Row>
               <Row className="mt-4">
-                <h5 className="m-4">You prefer to walk instead of drive to work if the weather allows it.</h5>
+                <h5 className="m-4">You know a few handy tricks to keep your house warm in winter.</h5>
+                <Range
+                  step={0.1}
+                  min={0}
+                  max={100}
+                  values={this.state.residential.q03}
+                  onChange={values => this.setState({ residential: { ...this.state.residential, q03: values } })}
+                  renderTrack={({ props, children }) => (
+                    <div
+                      {...props}
+                      style={{
+                        ...props.style,
+                        ...track.style
+                      }}
+                    >
+                      {children}
+                    </div>
+                  )}
+                  renderThumb={({ props }) => (
+                    <div
+                      {...props}
+                      style={{
+                        ...props.style,
+                        ...thumb.style
+                      }}
+                    />
+                  )}
+                />
+              </Row>
+              <Row className="mt-4">
+                <h5 className="m-4">Second-hand clothes are good for you.</h5>
+                <Range
+                  step={0.1}
+                  min={0}
+                  max={100}
+                  values={this.state.residential.q02}
+                  onChange={values => this.setState({ residential: { ...this.state.residential, q02: values } })}
+                  renderTrack={({ props, children }) => (
+                    <div
+                      {...props}
+                      style={{
+                        ...props.style,
+                        ...track.style
+                      }}
+                    >
+                      {children}
+                    </div>
+                  )}
+                  renderThumb={({ props }) => (
+                    <div
+                      {...props}
+                      style={{
+                        ...props.style,
+                        ...thumb.style
+                      }}
+                    />
+                  )}
+                />
+              </Row>
+              <Row className="mt-4">
+                <h5 className="m-4">When the weather allows it, you prefer to walk instead of drive to work.</h5>
                 <Range
                   step={0.1}
                   min={0}
                   max={100}
                   values={this.state.transport.q01}
                   onChange={values => this.setState({ transport: { ...this.state.transport, q01: values } })}
+                  renderTrack={({ props, children }) => (
+                    <div
+                      {...props}
+                      style={{
+                        ...props.style,
+                        ...track.style
+                      }}
+                    >
+                      {children}
+                    </div>
+                  )}
+                  renderThumb={({ props }) => (
+                    <div
+                      {...props}
+                      style={{
+                        ...props.style,
+                        ...thumb.style
+                      }}
+                    />
+                  )}
+                />
+              </Row>
+              <Row className="mt-4">
+                <h5 className="m-4">Lights are turned off in your house if they don't have to be on.</h5>
+                <Range
+                  step={0.1}
+                  min={0}
+                  max={100}
+                  values={this.state.residential.q01}
+                  onChange={values => this.setState({ residential: { ...this.state.residential, q01: values } })}
                   renderTrack={({ props, children }) => (
                     <div
                       {...props}
@@ -183,7 +278,7 @@ class TakeTest extends React.Component {
                 />
               </Row>
               <Row className="mt-4">
-                <h5 className="m-4">You are aware about the calories in the foods you eat.</h5>
+                <h5 className="m-4">You are usually aware about the calories in the foods you eat.</h5>
                 <Range
                   step={0.1}
                   min={0}
@@ -213,7 +308,7 @@ class TakeTest extends React.Component {
                 />
               </Row>
               <Row className="mt-4">
-                <h5 className="m-4">Walking and cycling are great for the mind and body.</h5>
+                <h5 className="m-4">Walking and cycling are great for your mind and body.</h5>
                 <Range
                   step={0.1}
                   min={0}
