@@ -1,8 +1,10 @@
 import React from 'react';
 import {
-  Container, Row, Col
+  Container, Row, Col, Button
 } from 'reactstrap';
 import { Range } from 'react-range';
+
+const BASE_URL = 'http://api.co2.today';
 
 const thumb = {
   style: {
@@ -29,6 +31,20 @@ class TakeTest extends React.Component {
         q02: [50],
         q03: [50]
     }};
+    this.seeResults = this.seeResults.bind(this);
+  }
+
+  seeResults(e) {
+    e.preventDefault();
+    fetch(BASE_URL + '/calculate', {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => {
+      this.props.history.push('/dashboard');
+    });
   }
 
   render() {
@@ -128,6 +144,15 @@ class TakeTest extends React.Component {
                     />
                   )}
                 />
+              </Row>
+              <Row className="mt-5">
+                <Button
+                  color="primary"
+                  onClick={this.seeResults}
+                  block
+                >
+                See results
+                </Button>
               </Row>
             </Col>
           </Row>
