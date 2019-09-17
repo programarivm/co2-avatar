@@ -26,21 +26,53 @@ class TakeTest extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      food: {
-        q01: [50],
-        q02: [50],
-        q03: [50]
-      },
-      transport: {
-        q01: [50],
-        q02: [50],
-        q03: [50]
-      },
-      residential: {
-        q01: [50],
-        q02: [50],
-        q03: [50]
-      }
+      questions: [
+        {
+          type: 'food',
+          text: 'Junk food is rubbish.',
+          values: [50]
+        },
+        {
+          type: 'food',
+          text: 'You never throw away the food you buy.',
+          values: [50]
+        },
+        {
+          type: 'food',
+          text: 'You are usually aware about the calories in the foods you eat.',
+          values: [50]
+        },
+        {
+          type: 'transport',
+          text: 'When the weather allows it, you prefer to walk instead of drive to work.',
+          values: [50]
+        },
+        {
+          type: 'transport',
+          text: 'You avoid taking a plane because you know it produces a lot of carbon emissions.',
+          values: [50]
+        },
+        {
+          type: 'transport',
+          text: 'You are usually aware about the calories in the foods you eat.',
+          values: [50]
+        },
+        {
+          type: 'residential',
+          text: 'You know a few handy tricks to keep your house warm in winter.',
+          values: [50]
+        },
+        {
+          type: 'residential',
+          text: 'Second-hand clothes are good for you.',
+          values: [50]
+        },
+        {
+          type: 'residential',
+          text: 'Second-hand clothes are good for you.',
+          values: [50]
+        }
+      ]
     };
     this.seeResults = this.seeResults.bind(this);
   }
@@ -53,291 +85,55 @@ class TakeTest extends React.Component {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(this.state)
+      body: JSON.stringify(this.state.questions)
     }).then(res => {
       this.props.history.push('/dashboard');
     });
   }
 
   render() {
-    // TODO:
-    // Add more questions...
     return (
       <div>
         <Container className="TakeTest">
           <h1 className="mt-5">Slide the big squares</h1>
           <Row>
             <Col lg="12">
-              <Row className="mt-5">
-                <h5 className="m-4">Junk food is rubbish.</h5>
-                <Range
-                  step={0.1}
-                  min={0}
-                  max={100}
-                  values={this.state.food.q01}
-                  onChange={values => this.setState({ food: { ...this.state.food, q01: values } })}
-                  renderTrack={({ props, children }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...track.style
-                      }}
-                    >
-                      {children}
-                    </div>
-                  )}
-                  renderThumb={({ props }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...thumb.style
-                      }}
-                    />
-                  )}
-                />
-              </Row>
-              <Row className="mt-5">
-                <h5 className="m-4">You know a few handy tricks to keep your house warm in winter.</h5>
-                <Range
-                  step={0.1}
-                  min={0}
-                  max={100}
-                  values={this.state.residential.q03}
-                  onChange={values => this.setState({ residential: { ...this.state.residential, q03: values } })}
-                  renderTrack={({ props, children }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...track.style
-                      }}
-                    >
-                      {children}
-                    </div>
-                  )}
-                  renderThumb={({ props }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...thumb.style
-                      }}
-                    />
-                  )}
-                />
-              </Row>
-              <Row className="mt-5">
-                <h5 className="m-4">Second-hand clothes are good for you.</h5>
-                <Range
-                  step={0.1}
-                  min={0}
-                  max={100}
-                  values={this.state.residential.q02}
-                  onChange={values => this.setState({ residential: { ...this.state.residential, q02: values } })}
-                  renderTrack={({ props, children }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...track.style
-                      }}
-                    >
-                      {children}
-                    </div>
-                  )}
-                  renderThumb={({ props }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...thumb.style
-                      }}
-                    />
-                  )}
-                />
-              </Row>
-              <Row className="mt-5">
-                <h5 className="m-4">When the weather allows it, you prefer to walk instead of drive to work.</h5>
-                <Range
-                  step={0.1}
-                  min={0}
-                  max={100}
-                  values={this.state.transport.q01}
-                  onChange={values => this.setState({ transport: { ...this.state.transport, q01: values } })}
-                  renderTrack={({ props, children }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...track.style
-                      }}
-                    >
-                      {children}
-                    </div>
-                  )}
-                  renderThumb={({ props }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...thumb.style
-                      }}
-                    />
-                  )}
-                />
-              </Row>
-              <Row className="mt-5">
-                <h5 className="m-4">Lights are turned off in your house if they don't have to be on.</h5>
-                <Range
-                  step={0.1}
-                  min={0}
-                  max={100}
-                  values={this.state.residential.q01}
-                  onChange={values => this.setState({ residential: { ...this.state.residential, q01: values } })}
-                  renderTrack={({ props, children }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...track.style
-                      }}
-                    >
-                      {children}
-                    </div>
-                  )}
-                  renderThumb={({ props }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...thumb.style
-                      }}
-                    />
-                  )}
-                />
-              </Row>
-              <Row className="mt-5">
-                <h5 className="m-4">You never throw away the food you buy.</h5>
-                <Range
-                  step={0.1}
-                  min={0}
-                  max={100}
-                  values={this.state.food.q02}
-                  onChange={values => this.setState({ food: { ...this.state.food, q02: values } })}
-                  renderTrack={({ props, children }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...track.style
-                      }}
-                    >
-                      {children}
-                    </div>
-                  )}
-                  renderThumb={({ props }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...thumb.style
-                      }}
-                    />
-                  )}
-                />
-              </Row>
-              <Row className="mt-5">
-                <h5 className="m-4">You avoid taking a plane because you know it produces a lot of carbon emissions.</h5>
-                <Range
-                  step={0.1}
-                  min={0}
-                  max={100}
-                  values={this.state.transport.q02}
-                  onChange={values => this.setState({ transport: { ...this.state.transport, q02: values } })}
-                  renderTrack={({ props, children }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...track.style
-                      }}
-                    >
-                      {children}
-                    </div>
-                  )}
-                  renderThumb={({ props }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...thumb.style
-                      }}
-                    />
-                  )}
-                />
-              </Row>
-              <Row className="mt-5">
-                <h5 className="m-4">You are usually aware about the calories in the foods you eat.</h5>
-                <Range
-                  step={0.1}
-                  min={0}
-                  max={100}
-                  values={this.state.food.q03}
-                  onChange={values => this.setState({ food: { ...this.state.food, q03: values } })}
-                  renderTrack={({ props, children }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...track.style
-                      }}
-                    >
-                      {children}
-                    </div>
-                  )}
-                  renderThumb={({ props }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...thumb.style
-                      }}
-                    />
-                  )}
-                />
-              </Row>
-              <Row className="mt-5">
-                <h5 className="m-4">Walking and cycling are great for your mind and body.</h5>
-                <Range
-                  step={0.1}
-                  min={0}
-                  max={100}
-                  values={this.state.transport.q03}
-                  onChange={values => this.setState({ transport: { ...this.state.transport, q03: values } })}
-                  renderTrack={({ props, children }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...track.style
-                      }}
-                    >
-                      {children}
-                    </div>
-                  )}
-                  renderThumb={({ props }) => (
-                    <div
-                      {...props}
-                      style={{
-                        ...props.style,
-                        ...thumb.style
-                      }}
-                    />
-                  )}
-                />
-              </Row>
+              {
+                this.state.questions.map( (item, i) => <Row className="mt-5">
+                  <h5 className="m-4">{item.text}</h5>
+                  <Range
+                    step={0.1}
+                    min={0}
+                    max={100}
+                    values={item.values}
+                    onChange={values => {
+                      let newState = Object.assign({}, this.state);
+                      newState.questions[i].values = values;
+                      this.setState(newState);
+                    }}
+                    renderTrack={({ props, children }) => (
+                      <div
+                        {...props}
+                        style={{
+                          ...props.style,
+                          ...track.style
+                        }}
+                      >
+                        {children}
+                      </div>
+                    )}
+                    renderThumb={({ props }) => (
+                      <div
+                        {...props}
+                        style={{
+                          ...props.style,
+                          ...thumb.style
+                        }}
+                      />
+                    )}
+                  />
+                </Row> )
+              }
               <Row className="m-5">
                 <Button
                   className="btn-lg"

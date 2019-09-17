@@ -14,10 +14,8 @@ $results = [
     'transport' => 0,
 ];
 
-foreach ($post as $category => $values) {
-    foreach ($values as $value) {
-        $results[$category] += current($value);
-    }
+foreach ($post as $question) {
+  $results[$question['type']] += current($question['values']);
 }
 
 $sql = "UPDATE points SET
