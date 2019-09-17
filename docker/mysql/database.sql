@@ -17,9 +17,9 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS points (
   id mediumint UNSIGNED NOT NULL AUTO_INCREMENT,
-  food tinyint UNSIGNED NOT NULL,
-  residential tinyint UNSIGNED NOT NULL,
-  transport tinyint UNSIGNED NOT NULL,
+  food smallint UNSIGNED NOT NULL,
+  residential smallint UNSIGNED NOT NULL,
+  transport smallint UNSIGNED NOT NULL,
   created_at DATETIME DEFAULT '2019-01-01 00:00:00',
   id_user mediumint UNSIGNED NOT NULL,
   PRIMARY KEY (id),
