@@ -26,9 +26,9 @@ class Dashboard extends React.Component {
 
   render() {
     let percent = {
-      food: Math.round(parseInt(this.state.food) * 100 / 300),
-      residential: Math.round(parseInt(this.state.residential) * 100 / 300),
-      transport: Math.round(parseInt(this.state.transport) * 100 / 300)
+      food: Math.round(parseInt(this.state.food) * 100 / 400),
+      residential: Math.round(parseInt(this.state.residential) * 100 / 400),
+      transport: Math.round(parseInt(this.state.transport) * 100 / 400)
     };
 
     return (

@@ -34,6 +34,11 @@ class TakeTest extends React.Component {
         },
         {
           type: 'food',
+          text: 'Your diet is mostly vegan.',
+          values: [50]
+        },
+        {
+          type: 'food',
           text: 'You never throw away the food you buy.',
           values: [50]
         },
@@ -49,12 +54,17 @@ class TakeTest extends React.Component {
         },
         {
           type: 'transport',
-          text: 'You avoid taking a plane because you know it produces a lot of carbon emissions.',
+          text: 'Walking and cycling are great for your mind and body.',
           values: [50]
         },
         {
           type: 'transport',
-          text: 'You are usually aware about the calories in the foods you eat.',
+          text: "You don't have a car.",
+          values: [50]
+        },
+        {
+          type: 'transport',
+          text: 'You avoid taking a plane because you know it produces a lot of carbon emissions.',
           values: [50]
         },
         {
@@ -64,12 +74,17 @@ class TakeTest extends React.Component {
         },
         {
           type: 'residential',
-          text: 'Second-hand clothes are good for you.',
+          text: 'Second-hand clothes are your cup of tea.',
           values: [50]
         },
         {
           type: 'residential',
-          text: 'Second-hand clothes are good for you.',
+          text: 'Most of your furniture is second-hand.',
+          values: [50]
+        },
+        {
+          type: 'residential',
+          text: "Lights are turned off if they don't have to be on.",
           values: [50]
         }
       ]
