@@ -15,7 +15,7 @@ $results = [
 ];
 
 foreach ($post as $question) {
-  $results[$question['type']] += current($question['values']);
+    $results[$question['type']] += current($question['values']);
 }
 
 $sql = "UPDATE points SET
