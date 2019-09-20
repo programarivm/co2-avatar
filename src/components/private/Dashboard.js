@@ -11,7 +11,7 @@ class Dashboard extends React.Component {
   }
 
   componentDidMount() {
-    fetch(Env.BASE_URL + '/points', {
+    fetch(Env.BASE_URL + '/results', {
       method: 'GET',
       credentials: 'include',
       headers: {
@@ -24,24 +24,18 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    let percent = {
-      food: Math.round(parseInt(this.state.food) * 100 / 400),
-      residential: Math.round(parseInt(this.state.residential) * 100 / 400),
-      transport: Math.round(parseInt(this.state.transport) * 100 / 400)
-    };
-
     return (
       <div>
         <Container className="Dashboard">
-          <h1 className="mt-5">Score: {parseInt(this.state.food) + parseInt(this.state.residential) + parseInt(this.state.transport)} points</h1>
+          <h1 className="mt-5">Score: {this.state.total} points</h1>
           <Row>
             <Col lg="12">
-              <div className="mt-2 text-center">Food {percent.food}%</div>
-              <Progress className="mt-2" color="info" value={percent.food} />
-              <div className="mt-5 text-center">Residential {percent.residential}%</div>
-              <Progress className="mt-2" color="warning" value={percent.residential} />
-              <div className="mt-5 text-center">Transport {percent.transport}%</div>
-              <Progress className="mt-2" color="success" value={percent.transport} />
+              <div className="mt-2 text-center">Food {this.state.pct_food}%</div>
+              <Progress className="mt-2" color="info" value={this.state.pct_food} />
+              <div className="mt-5 text-center">Residential {this.state.pct_residential}%</div>
+              <Progress className="mt-2" color="warning" value={this.state.pct_residential} />
+              <div className="mt-5 text-center">Transport {this.state.pct_transport}%</div>
+              <Progress className="mt-2" color="success" value={this.state.pct_transport} />
             </Col>
           </Row>
         </Container>

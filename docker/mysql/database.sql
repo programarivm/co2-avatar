@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS avatars (
     id tinyint UNSIGNED NOT NULL AUTO_INCREMENT,
     name VARCHAR(16) NOT NULL,
     description VARCHAR(512) NOT NULL,
-    points tinyint UNSIGNED NOT NULL,
+    pct smallint UNSIGNED NOT NULL,
     image VARCHAR(32) NOT NULL,
     PRIMARY KEY (id)
 ) ENGINE=InnoDB;
@@ -30,11 +30,12 @@ CREATE TABLE IF NOT EXISTS users (
     PRIMARY KEY (id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE IF NOT EXISTS points (
+CREATE TABLE IF NOT EXISTS results (
     id mediumint UNSIGNED NOT NULL AUTO_INCREMENT,
-    food smallint UNSIGNED NOT NULL,
-    residential smallint UNSIGNED NOT NULL,
-    transport smallint UNSIGNED NOT NULL,
+    total smallint UNSIGNED NOT NULL,
+    pct_food tinyint UNSIGNED NOT NULL,
+    pct_residential tinyint UNSIGNED NOT NULL,
+    pct_transport tinyint UNSIGNED NOT NULL,
     created_at DATETIME DEFAULT '2019-01-01 00:00:00',
     id_user mediumint UNSIGNED NOT NULL,
     id_avatar tinyint UNSIGNED NOT NULL,
@@ -106,12 +107,19 @@ INSERT INTO questions(data) VALUES ('[
   }
 ]');
 
-INSERT INTO avatars(name, description, points, image) VALUES ('Mutant', "A mutant has a low level of consciousness, most probably because they haven't been taught that human species will die off soon. Let's say they are reckless. Mutants live as if there was no tomorrow, which is a bad thing especially if you have kids and care about the well-being of your offspring. They need the urgent help of healers.", 20, 'mutant.jpg');
-INSERT INTO avatars(name, description, points, image) VALUES ('Polluter', "Polluters: human beings that pollute the environment at alarming rates. Not as much as mutants, but they are still a menace to your offspring's future in this planet. Polluters must do much more so nature can guarantee a successful, evolutionary link to future non-CO2 earthlings. They need the help of healers.", 40, 'polluter.jpg');
-INSERT INTO avatars(name, description, points, image) VALUES ('Neutral', "As the name itself implies, neutral CO2 individuals don't contaminate too much which helps a little bit. They are not a direct threat to this world's ecosystem. By the end of the day it is better to be neutral than to be a mutant -- but remember, there's no time to waste anymore, we are talking about the end of the world as we know it.", 60, 'neutral.jpg');
-INSERT INTO avatars(name, description, points, image) VALUES ('Healer', "TODO: description.", 80, 'healer.jpg');
-INSERT INTO avatars(name, description, points, image) VALUES ('Hero', "TODO: description.", 100, 'hero.jpg');
+SET @pctRange = 100 / 5;
+SET @mutantPct = @pctRange;
+SET @polluterPct = @pctRange * 2;
+SET @neutralPct = @pctRange * 3;
+SET @healerPct = @pctRange * 4;
+SET @heroPct = @pctRange * 5;
+
+INSERT INTO avatars(name, description, pct, image) VALUES ('Mutant', "A mutant has a low level of consciousness, most probably because they haven't been taught that human species will die off soon. Let's say they are reckless. Mutants live as if there was no tomorrow, which is a bad thing especially if you have kids and care about the well-being of your offspring. They need the urgent help of healers.", @mutantPct, 'mutant.jpg');
+INSERT INTO avatars(name, description, pct, image) VALUES ('Polluter', "Polluters: human beings that pollute the environment at alarming rates. Not as much as mutants, but they are still a menace to your offspring's future in this planet. Polluters must do much more so nature can guarantee a successful, evolutionary link to future non-CO2 earthlings. They need the help of healers.", @polluterPct, 'polluter.jpg');
+INSERT INTO avatars(name, description, pct, image) VALUES ('Neutral', "As the name itself implies, neutral CO2 individuals don't contaminate too much which helps a little bit. They are not a direct threat to this world's ecosystem. By the end of the day it is better to be neutral than to be a mutant -- but remember, there's no time to waste anymore, we are talking about the end of the world as we know it.", @neutralPct, 'neutral.jpg');
+INSERT INTO avatars(name, description, pct, image) VALUES ('Healer', "TODO: description.", @healerPct, 'healer.jpg');
+INSERT INTO avatars(name, description, pct, image) VALUES ('Hero', "TODO: description.", @heroPct, 'hero.jpg');
 
 INSERT INTO users(email, password) VALUES ('bob-smith@foo.com', '$2y$12$AOR2qZ1UOOoSDahahCkRlut8q6j66IKPmbzYIYMWx678qcGg9uQga');
 
-INSERT INTO points(food, residential, transport, id_user, id_avatar) VALUES (10, 15, 5, 1, 1);
+INSERT INTO results(total, pct_food, pct_residential, pct_transport, id_user, id_avatar) VALUES (600, 50, 50, 50, 1, 1);
