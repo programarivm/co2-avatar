@@ -7,6 +7,12 @@ USE co2;
 GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, LOCK TABLES, CREATE TEMPORARY TABLES
 ON co2.* TO 'root'@'localhost' IDENTIFIED BY 'password';
 
+CREATE TABLE IF NOT EXISTS questions (
+    id tinyint UNSIGNED NOT NULL AUTO_INCREMENT,
+    data JSON NOT NULL,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB;
+
 CREATE TABLE IF NOT EXISTS avatars (
     id tinyint UNSIGNED NOT NULL AUTO_INCREMENT,
     name VARCHAR(16) NOT NULL,
@@ -37,10 +43,75 @@ CREATE TABLE IF NOT EXISTS points (
     FOREIGN KEY (id_avatar) REFERENCES avatars(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
+INSERT INTO questions(data) VALUES ('[
+  {
+    "type": "food",
+    "text": "Junk food is rubbish.",
+    "values": [50]
+  },
+  {
+    "type": "food",
+    "text": "Your diet is mostly vegan.",
+    "values": [50]
+  },
+  {
+    "type": "food",
+    "text": "You never throw away the food you buy.",
+    "values": [50]
+  },
+  {
+    "type": "food",
+    "text": "You are usually aware about the calories in the foods you eat.",
+    "values": [50]
+  },
+  {
+    "type": "transport",
+    "text": "When the weather allows it, you prefer to walk instead of drive to work.",
+    "values": [50]
+  },
+  {
+    "type": "transport",
+    "text": "Walking and cycling are great for your mind and body.",
+    "values": [50]
+  },
+  {
+    "type": "transport",
+    "text": "You don\'t have a car.",
+    "values": [50]
+  },
+  {
+    "type": "transport",
+    "text": "You avoid taking a plane because you know it produces a lot of carbon emissions.",
+    "values": [50]
+  },
+  {
+    "type": "residential",
+    "text": "You know a few handy tricks to keep your house warm in winter.",
+    "values": [50]
+  },
+  {
+    "type": "residential",
+    "text": "Second-hand clothes are your cup of tea.",
+    "values": [50]
+  },
+  {
+    "type": "residential",
+    "text": "Most of your furniture is second-hand.",
+    "values": [50]
+  },
+  {
+    "type": "residential",
+    "text": "Lights are turned off if they don\'t have to be on.",
+    "values": [50]
+  }
+]');
+
 INSERT INTO avatars(name, description, percent, image) VALUES ('Mutant', "A mutant has a low level of consciousness, most probably because they haven't been taught that human species will die off soon. Let's say they are reckless. Mutants live as if there was no tomorrow, which is a bad thing especially if you have kids and care about the well-being of your offspring. They need the urgent help of healers.", 20, 'mutant.jpg');
 INSERT INTO avatars(name, description, percent, image) VALUES ('Polluter', "Polluters: human beings that pollute the environment at alarming rates. Not as much as mutants, but they are still a menace to your offspring's future in this planet. Polluters must do much more so nature can guarantee a successful, evolutionary link to future non-CO2 earthlings. They need the help of healers.", 40, 'polluter.jpg');
 INSERT INTO avatars(name, description, percent, image) VALUES ('Neutral', "As the name itself implies, neutral CO2 individuals don't contaminate too much which helps a little bit. They are not a direct threat to this world's ecosystem. By the end of the day it is better to be neutral than to be a mutant -- but remember, there's no time to waste anymore, we are talking about the end of the world as we know it.", 60, 'neutral.jpg');
 INSERT INTO avatars(name, description, percent, image) VALUES ('Healer', "TODO: description.", 80, 'healer.jpg');
 INSERT INTO avatars(name, description, percent, image) VALUES ('Hero', "TODO: description.", 100, 'hero.jpg');
+
 INSERT INTO users(email, password) VALUES ('bob-smith@foo.com', '$2y$12$AOR2qZ1UOOoSDahahCkRlut8q6j66IKPmbzYIYMWx678qcGg9uQga');
+
 INSERT INTO points(food, residential, transport, id_user, id_avatar) VALUES (10, 15, 5, 1, 1);

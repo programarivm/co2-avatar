@@ -14,4 +14,6 @@ switch (true) {
         require_once APP_PATH.'/api/endpoints/calculate.php';
     case '/points' === $_SERVER['REQUEST_URI']:
         require_once APP_PATH.'/api/endpoints/points.php';
+    case '/questions' === $_SERVER['REQUEST_URI']:
+        require_once APP_PATH.'/api/endpoints/questions.php';
 }
