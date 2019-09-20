@@ -2,8 +2,7 @@ import React from 'react';
 import {
   Container, Row, Col, Progress
 } from 'reactstrap';
-
-const BASE_URL = 'http://api.co2.today';
+import Env from '../../constants/Env';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -12,7 +11,7 @@ class Dashboard extends React.Component {
   }
 
   componentDidMount() {
-    fetch(BASE_URL + '/points', {
+    fetch(Env.BASE_URL + '/points', {
       method: 'GET',
       credentials: 'include',
       headers: {

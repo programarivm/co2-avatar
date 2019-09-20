@@ -1,5 +1,5 @@
 import AppDispatcher from "../dispatcher/AppDispatcher.js";
-import ActionTypes from '../constants/AppConstants';
+import ActionTypes from '../constants/ActionTypes';
 
 class AppActions {
 	logIn(data) {

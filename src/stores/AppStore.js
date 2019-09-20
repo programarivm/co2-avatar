@@ -1,9 +1,9 @@
-import ActionTypes from '../constants/AppConstants';
+import ActionTypes from '../constants/ActionTypes';
+import Env from '../constants/Env';
 import AppDispatcher from "../dispatcher/AppDispatcher.js";
 import { EventEmitter } from 'events';
 import Cookies from 'universal-cookie';
 
-const BASE_URL = 'http://api.co2.today';
 const cookies = new Cookies();
 
 class AppStore extends EventEmitter {
@@ -20,7 +20,7 @@ class AppStore extends EventEmitter {
 	}
 
 	logIn(credentials) {
-		fetch(BASE_URL + '/auth', {
+		fetch(Env.BASE_URL + '/auth', {
 			method: 'POST',
 			credentials: 'include',
 			headers: {
