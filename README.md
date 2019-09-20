@@ -1,14 +1,6 @@
 # CO2 Footprint
 
-This app helps you raise awareness about how much carbon dioxide (CO2) you are producing on a daily basis. Find out your CO2 avatar and learn how to reduce your carbon footprint right now.
-
-There is no time to waste anymore!
-
-<p align="center">
-	<img src="https://github.com/programarivm/CO2-footprint/blob/master/src/assets/images/avatars/mutant.jpg" />
-</p>
-
-> <b>Figure 1</b>. A mutant has a low level of consciousness, most probably because they haven't been taught that human species will die off soon. Let's say they are reckless. Mutants live as if there was no tomorrow, which is a bad thing especially if you have kids and care about the well-being of your offspring. They need the urgent help of healers.
+This app helps you raise awareness about how much carbon dioxide (CO2) you are producing on a daily basis. Find out your CO2 avatar and learn how to reduce your carbon footprint right now. There is no time to waste anymore!
 
 ### 1. Build the Docker Containers
 
