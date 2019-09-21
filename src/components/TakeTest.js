@@ -3,8 +3,8 @@ import {
   Container, Row, Col, Button
 } from 'reactstrap';
 import { Range } from 'react-range';
+import Api from '../Api.js';
 import AppActions from '../actions/AppActions.js';
-import Env from '../constants/Env';
 
 const thumb = {
   style: {
@@ -25,60 +25,20 @@ const track = {
 class TakeTest extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      questions: Api.questions()
+    };
     this.seeResults = this.seeResults.bind(this);
-  }
-
-  componentDidMount() {
-    fetch(Env.BASE_URL + '/questions', {
-      method: 'GET',
-      credentials: 'include',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(res => res.json())
-      .then(res => {
-        let questions = JSON.parse(res);
-        questions.sort(function() {
-          return 0.5 - Math.random();
-        });
-        this.setState({ questions: questions });
-      });
   }
 
   seeResults(e) {
     e.preventDefault();
-    let avatars = fetch(Env.BASE_URL + '/avatars', {
-      method: 'GET',
-      credentials: 'include',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(res => res.json())
-      .then(res => {
-        return res;
-      });
-    let results = fetch(Env.BASE_URL + '/results', {
-      method: 'POST',
-      credentials: 'include',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(this.state.questions)
-    }).then(res => res.json())
-      .then(res => {
-        return res;
-      });
-    avatars.then(resAvatars => {
-      results.then(resResults => {
-        let avatar = resAvatars.find(item => item.id == resResults.id_avatar);
-        AppActions.seeResults({
-          results: resResults,
-          avatar: avatar
-        });
-        this.props.history.push('/results');
-      });
+    let results = Api.results(this.state.questions);
+    AppActions.seeResults({
+      results: results,
+      avatar: Api.avatars().find(item => item.id === results.id_avatar)
     });
+    this.props.history.push('/results');
   }
 
   render() {
