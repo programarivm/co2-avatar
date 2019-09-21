@@ -21,11 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# docker
-/docker/nginx/ssl/co2.today.*
-
-# api
-/composer.lock
-/vendor/
-.env
