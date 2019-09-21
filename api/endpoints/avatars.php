@@ -6,9 +6,13 @@ use Co2\Utils\Authorizer;
 $jwt = Authorizer::authorize();
 
 $sql = "SELECT * FROM avatars";
-$result = DB::getInstance()->query($sql)->fetch_array(MYSQLI_ASSOC);
+$result = DB::getInstance()->query($sql);
+$rows = [];
+while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+    $rows[] = $row;
+}
 
 http_response_code(200);
-print_r(json_encode($result, true));
+print_r(json_encode($rows, true));
 
 exit;
