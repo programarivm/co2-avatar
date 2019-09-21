@@ -3,6 +3,7 @@ import {
   Container, Row, Col, Button
 } from 'reactstrap';
 import { Range } from 'react-range';
+import AppActions from '../actions/AppActions.js';
 import Env from '../constants/Env';
 
 const thumb = {
@@ -47,7 +48,17 @@ class TakeTest extends React.Component {
 
   seeResults(e) {
     e.preventDefault();
-    fetch(Env.BASE_URL + '/results', {
+    let avatars = fetch(Env.BASE_URL + '/avatars', {
+      method: 'GET',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json())
+      .then(res => {
+        return res;
+      });
+    let results = fetch(Env.BASE_URL + '/results', {
       method: 'POST',
       credentials: 'include',
       headers: {
@@ -56,8 +67,17 @@ class TakeTest extends React.Component {
       body: JSON.stringify(this.state.questions)
     }).then(res => res.json())
       .then(res => {
-        console.log(res);
-        this.props.history.push('/result');
+        return res;
+      });
+    avatars.then(resAvatars => {
+      results.then(resResults => {
+        let avatar = resAvatars.find(item => item.id == resResults.id_avatar);
+        AppActions.seeResults({
+          results: resResults,
+          avatar: avatar
+        });
+        this.props.history.push('/results');
+      });
     });
   }
 

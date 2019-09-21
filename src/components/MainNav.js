@@ -7,7 +7,7 @@ import { Link, Route, Redirect } from 'react-router-dom';
 import { Home } from "./Home.js";
 import { SavePlanet } from "./SavePlanet.js";
 import { TakeTest } from "./TakeTest.js";
-import { Result } from "./Result.js";
+import { Results } from "./Results.js";
 import logo from '../assets/images/logo.png';
 import './MainNav.css';
 
@@ -80,8 +80,8 @@ class MainNav extends React.Component {
           render={(props) => <TakeTest {...props} />}
         />
         <Route
-          path="/result"
-          render={(props) => <Result {...props} />}
+          path="/results"
+          render={(props) => <Results {...props} />}
         />
       </div>
     );
