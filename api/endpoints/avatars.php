@@ -3,8 +3,6 @@
 use Co2\Utils\DB;
 use Co2\Utils\Authorizer;
 
-$jwt = Authorizer::authorize();
-
 $sql = "SELECT * FROM avatars";
 $result = DB::getInstance()->query($sql);
 $rows = [];

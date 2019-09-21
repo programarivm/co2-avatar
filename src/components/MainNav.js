@@ -3,11 +3,12 @@ import {
   Collapse, Navbar, NavbarToggler,
   NavbarBrand, Nav, NavItem,
   NavLink } from 'reactstrap';
-import { Link, Route } from 'react-router-dom';
-import { Dashboard } from "./Dashboard.js";
+import { Link, Route, Redirect } from 'react-router-dom';
+import { Home } from "./Home.js";
+import { SavePlanet } from "./SavePlanet.js";
 import { TakeTest } from "./TakeTest.js";
-import AppActions from '../../actions/AppActions.js';
-import logo from '../../assets/images/logo.png';
+import { Result } from "./Result.js";
+import logo from '../assets/images/logo.png';
 import './MainNav.css';
 
 class MainNav extends React.Component {
@@ -19,7 +20,6 @@ class MainNav extends React.Component {
       isOpen: false
     };
     this.toggle = this.toggle.bind(this);
-    this.logOut = this.logOut.bind(this);
   }
 
   componentDidMount() {
@@ -38,23 +38,24 @@ class MainNav extends React.Component {
     }
   }
 
-  logOut() {
-    AppActions.logOut();
-  }
-
   render() {
     return (
       <div>
         <Navbar light expand="md" className="MainNav">
-          <NavbarBrand tag={Link} to="/dashboard">
+          <NavbarBrand tag={Link} to="/home">
             <img src={logo} className="logo" alt="logo" />
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink tag={Link} to="/dashboard">
-                  Dashboard
+                <NavLink tag={Link} to="/home">
+                  Home
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} to="/save-the-planet">
+                  Save the planet
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -62,21 +63,25 @@ class MainNav extends React.Component {
                   Take the test
                 </NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink tag={Link} onClick={this.logOut}>
-                  Sign out
-                </NavLink>
-              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
+        <Route exact path="/" render={() => (<Redirect to="/home" />)} />
         <Route
-          path="/dashboard"
-          render={(props) => <Dashboard {...props} />}
+          path="/home"
+          render={(props) => <Home {...props} />}
+        />
+        <Route
+          path="/save-the-planet"
+          render={(props) => <SavePlanet {...props} />}
         />
         <Route
           path="/take-the-test"
           render={(props) => <TakeTest {...props} />}
+        />
+        <Route
+          path="/result"
+          render={(props) => <Result {...props} />}
         />
       </div>
     );

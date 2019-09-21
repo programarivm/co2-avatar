@@ -3,7 +3,7 @@ import {
   Container, Row, Col, Button
 } from 'reactstrap';
 import { Range } from 'react-range';
-import Env from '../../constants/Env';
+import Env from '../constants/Env';
 
 const thumb = {
   style: {
@@ -47,15 +47,17 @@ class TakeTest extends React.Component {
 
   seeResults(e) {
     e.preventDefault();
-    fetch(Env.BASE_URL + '/calculate', {
+    fetch(Env.BASE_URL + '/results', {
       method: 'POST',
       credentials: 'include',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(this.state.questions)
-    }).then(res => {
-      this.props.history.push('/dashboard');
+    }).then(res => res.json())
+      .then(res => {
+        console.log(res);
+        this.props.history.push('/result');
     });
   }
 

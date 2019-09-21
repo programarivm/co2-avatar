@@ -3,8 +3,6 @@
 use Co2\Utils\DB;
 use Co2\Utils\Authorizer;
 
-$jwt = Authorizer::authorize();
-
 $sql = "SELECT * FROM questions";
 $result = DB::getInstance()->query($sql)->fetch_array(MYSQLI_ASSOC);
 
