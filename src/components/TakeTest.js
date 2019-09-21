@@ -53,7 +53,7 @@ class TakeTest extends React.Component {
                 <Col lg="12">
                 <h1 className="mt-5">Slide the big squares</h1>
                 {
-                  this.state.questions.map( (item, i) => <Row className="mt-5">
+                  this.state.questions.map( (item, i) => <Row key={i} className="mt-5">
                     <h5 className="m-4">{item.text}</h5>
                     <Range
                       step={0.1}

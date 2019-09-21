@@ -127,9 +127,9 @@ class Api {
       results[item.type] += item.values[0];
     });
     let pct = {
-      food: results.food * 100 / 400,
-      residential: results.residential * 100 / 400,
-      transport: results.transport * 100 / 400
+      food: Math.floor(results.food * 100 / 400),
+      residential: Math.floor(results.residential * 100 / 400),
+      transport: Math.floor(results.transport * 100 / 400)
     };
     let pctAverage = (pct.food + pct.residential + pct.transport) / 3;
     let idAvatar;
@@ -145,7 +145,7 @@ class Api {
       idAvatar = 5;
     }
     return {
-      total: results.food + results.residential + results.transport,
+      total: Math.floor(results.food + results.residential + results.transport),
       pct_food: pct.food,
       pct_residential: pct.residential,
       pct_transport: pct.transport,
