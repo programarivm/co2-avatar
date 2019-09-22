@@ -48,7 +48,7 @@ class TakeTest extends React.Component {
               </p>
             : <Row>
                 <Col lg="12">
-                <h1 className="mt-5">Slide the big squares</h1>
+                <h1 className="mt-5">Slide the big squares sincerely</h1>
                 {
                   this.state.questions.map( (item, i) => <Row key={i} className="mt-5">
                     <h5 className="m-4">{item.text}</h5>
