@@ -43,14 +43,14 @@ class Api {
       {
         id: 4,
         name: 'Healer',
-        description: "Congratulations! You are a healer. This is the first good one of all five avatars. Healers barely contaminate the environment and can teach the rest of avatars how decarbonise themselves.",
+        description: "Congratulations! You are a healer. This is the first good one of all five avatars. Healers barely contaminate the environment and can teach the rest of avatars how to decarbonise themselves.",
         pct: pctRange * 4,
         image: 'healer.jpg'
       },
       {
         id: 5,
         name: 'Hero',
-        description: "Congratulations! You are a hero. If every human being was like you in terms of CO2 emissions we all would be in the right way towards towards a sustainable future.",
+        description: "Congratulations! You are a hero. If every human being was like you in terms of CO2 emissions we all would be in the right way towards a sustainable future.",
         pct: pctRange * 5,
         image: 'hero.jpg'
       }
