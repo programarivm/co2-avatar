@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "578212ed7bb91a0ace7a15642d1a7cac",
+    "revision": "2f0c6f46babe2dd432a6c8df24015ac2",
     "url": "/co2-avatar/index.html"
   },
   {
