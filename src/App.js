@@ -9,7 +9,7 @@ class App extends Component {
       <div className="App">
         <MainNav />
         <CookieConsent>
-          Cookies? This website does not collect personal data through third-party cookies, it does not use any cookie.
+          Cookies? This website does not collect personal data through third-party cookies.
         </CookieConsent>
       </div>
     );
