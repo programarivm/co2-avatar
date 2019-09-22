@@ -1,5 +1,9 @@
 # CO2 Footprint
 
+<p align="center">
+	<img src="https://github.com/programarivm/co2-avatar/blob/master/src/assets/images/earth.jpg" />
+</p>
+
 This app helps you raise awareness about how much carbon dioxide (CO2) you are producing on a daily basis. Find out your CO2 avatar and learn how to reduce your carbon footprint right now. There is no time to waste anymore!
 
 ### Demo
