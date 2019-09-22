@@ -1,8 +1,9 @@
 import React from 'react';
 import {
-  Button, Card, CardImg, CardText, CardBody,
+  Card, CardImg, CardText, CardBody,
   CardTitle, Container, Row, Col
 } from 'reactstrap';
+import { NavLink } from "react-router-dom";
 import { Footer } from "./Footer.js";
 import earth from '../assets/images/earth.svg';
 import london from '../assets/images/london.jpg';
@@ -20,7 +21,7 @@ class SavePlanet extends React.Component {
               <h1 className="mt-5">Carbon Footprint</h1>
               <h5>We help you raise awareness about how much carbon dioxide (CO2) you are producing on a daily basis.</h5>
               <h5>Learn how to reduce your carbon footprint right now since there is no time to waste anymore.</h5>
-              <Button className="mt-2" color="secondary">Save the planet today!</Button>
+              <NavLink className="mt-2 btn btn-secondary text-white" to="/take-the-test">Save the planet today!</NavLink>
             </Col>
             <Col lg="4">
               <figure className="swing">
@@ -48,7 +49,7 @@ class SavePlanet extends React.Component {
                   </a>
                 </Col>
                 <Col lg="4">
-                  <a href="https://www.nationalgeographic.co.uk/environment-and-conservation201907londons-climate-will-resemble-barcelonas-2050-study-reveals" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.independent.co.uk/environment/bees-extinct-climate-change-habitat-loss-pollution-economy-wwf-a8921221.html" target="_blank" rel="noopener noreferrer">
                     <Card className="mt-3">
                       <CardImg top width="100%" src={bees} alt="Bees" />
                       <CardBody>
@@ -61,7 +62,7 @@ class SavePlanet extends React.Component {
                   </a>
                 </Col>
                 <Col lg="4">
-                  <a href="https://www.nationalgeographic.co.uk/environment-and-conservation201907londons-climate-will-resemble-barcelonas-2050-study-reveals" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.scientificamerican.com/article/when-will-all-the-ice-in-the-arctic-be-gone/" target="_blank" rel="noopener noreferrer">
                     <Card className="mt-3">
                       <CardImg top width="100%" src={arctic} alt="Arctic" />
                       <CardBody>
