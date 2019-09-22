@@ -5,7 +5,7 @@ import {
 } from 'reactstrap';
 import { NavLink } from "react-router-dom";
 import { Footer } from "./Footer.js";
-import earth from '../assets/images/earth.svg';
+import earth from '../assets/images/earth.jpg';
 import london from '../assets/images/london.jpg';
 import bees from '../assets/images/bees.jpg';
 import arctic from '../assets/images/arctic.jpeg';
