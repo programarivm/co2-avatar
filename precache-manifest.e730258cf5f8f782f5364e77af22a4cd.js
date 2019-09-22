@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d1f5a4eddfb5610251e4faefd4afd9ca",
+    "revision": "b523d811e2a5ed69a44baa2073c2bf48",
     "url": "/co2-avatar/index.html"
   },
   {
-    "revision": "4a59f4d6963ae624d2b0",
+    "revision": "3d3d0ec53b5de196fc44",
     "url": "/co2-avatar/static/css/2.22a7d4ef.chunk.css"
   },
   {
-    "revision": "1ae4e5e73b6e6327fd57",
-    "url": "/co2-avatar/static/css/main.e3d617ba.chunk.css"
+    "revision": "4ede415685ae20edbd3f",
+    "url": "/co2-avatar/static/css/main.e2c9c706.chunk.css"
   },
   {
-    "revision": "4a59f4d6963ae624d2b0",
-    "url": "/co2-avatar/static/js/2.bb7908eb.chunk.js"
+    "revision": "3d3d0ec53b5de196fc44",
+    "url": "/co2-avatar/static/js/2.cd2726d3.chunk.js"
   },
   {
-    "revision": "1ae4e5e73b6e6327fd57",
-    "url": "/co2-avatar/static/js/main.71da38c6.chunk.js"
+    "revision": "4ede415685ae20edbd3f",
+    "url": "/co2-avatar/static/js/main.bac2614b.chunk.js"
   },
   {
     "revision": "1fad641eca32b29aaac6",
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/co2-avatar/static/media/bees.4452f802.jpg"
   },
   {
-    "revision": "2a54ba87696178858619d88466422cff",
-    "url": "/co2-avatar/static/media/earth.2a54ba87.svg"
+    "revision": "8bbb90f3a3cf00dec5a91290f6395c6e",
+    "url": "/co2-avatar/static/media/earth.8bbb90f3.jpg"
   },
   {
     "revision": "e77c97e59058bf48ad212b8ea41912a8",
