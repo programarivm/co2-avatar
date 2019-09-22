@@ -34,10 +34,7 @@ class TakeTest extends React.Component {
   seeResults(e) {
     e.preventDefault();
     let results = Api.results(this.state.questions);
-    AppActions.seeResults({
-      results: results,
-      avatar: Api.avatars().find(item => item.id === results.id_avatar)
-    });
+    AppActions.seeResults(results);
     this.props.history.push('/results');
   }
 

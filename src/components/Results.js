@@ -30,13 +30,13 @@ class Results extends React.Component {
                   </h1>
                 </Col>
                 <Col lg="6" className="text-center">
-                  <h1 className="mt-5">{this.state.results.total} points</h1>
-                  <div className="mt-2">Food {this.state.results.pct_food}%</div>
-                  <Progress className="mt-2" color="info" value={this.state.results.pct_food} />
-                  <div className="mt-5">Residential {this.state.results.pct_residential}%</div>
-                  <Progress className="mt-2" color="warning" value={this.state.results.pct_residential} />
-                  <div className="mt-5">Transport {this.state.results.pct_transport}%</div>
-                  <Progress className="mt-2" color="success" value={this.state.results.pct_transport} />
+                  <h1 className="mt-5">{this.state.total} points</h1>
+                  <div className="mt-2">Food {this.state.pct_food}%</div>
+                  <Progress className="mt-2" color="info" value={this.state.pct_food} />
+                  <div className="mt-5">Residential {this.state.pct_residential}%</div>
+                  <Progress className="mt-2" color="warning" value={this.state.pct_residential} />
+                  <div className="mt-5">Transport {this.state.pct_transport}%</div>
+                  <Progress className="mt-2" color="success" value={this.state.pct_transport} />
                 </Col>
                 <h5 className="mt-3">{this.state.avatar.description}</h5>
               </Row>
