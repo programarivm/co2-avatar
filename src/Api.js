@@ -148,8 +148,39 @@ class Api {
       pct_food: pct.food,
       pct_residential: pct.residential,
       pct_transport: pct.transport,
-      avatar: Api.avatar(pctAverage, points)
+      avatar: Api.avatar(pctAverage, points),
+      tip: Api.tip(pct)
     }
+  }
+
+  static tip(pct) {
+    let tip;
+    let tips = {
+      food: [
+        "Try a vegan diet",
+        "Don't eat fast food in at least one year's time"
+      ],
+      residential: [
+        "Learn a few tips about how to keep your house warm in winter and cool in summer",
+        "Use more second-hand things",
+      ],
+      transport: [
+        "Walk more instead of driving",
+        "Don't fly in at least two year's time",
+      ]
+    };
+
+    if (pct.food < 80) {
+      tip = tips.food[Math.floor(Math.random()*tips.food.length)];
+    } else if (pct.residential < 80) {
+      tip = tips.residential[Math.floor(Math.random()*tips.residential.length)];
+    } else if (pct.transport < 80) {
+      tip = tips.transport[Math.floor(Math.random()*tips.transport.length)];
+    } else {
+      tip = "Your mission is to teach the rest of avatars how to save the planet"
+    }
+
+    return tip;
   }
 }
 

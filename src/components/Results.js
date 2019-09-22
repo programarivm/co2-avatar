@@ -24,14 +24,19 @@ class Results extends React.Component {
                 Loading...
               </p>
             : <Row>
-                <Col lg="6" className="text-center">
-                  <h1 className="mt-5">
-                    Your avatar is: {this.state.avatar.name}<br />
-                    <img src={require(`../assets/images/avatars/${this.state.avatar.image}`)} className="img-fluid" alt="avatar" />
-                  </h1>
+                <Col lg="12">
+                  <h4 className="mt-5">
+                    Avatar: {this.state.avatar.name}<br />
+                    Score: {this.state.total} points<br />
+                    A tip for you: {this.state.tip}
+                  </h4>
                 </Col>
                 <Col lg="6" className="text-center">
-                  <h1 className="mt-5">{this.state.total} points</h1>
+                  <h5 className="mt-2">
+                    <img src={require(`../assets/images/avatars/${this.state.avatar.image}`)} className="img-fluid" alt="avatar" />
+                  </h5>
+                </Col>
+                <Col lg="6" className="text-center">
                   <div className="mt-2">Food {this.state.pct_food}%</div>
                   <Progress className="mt-2" color="info" value={this.state.pct_food} />
                   <div className="mt-5">Residential {this.state.pct_residential}%</div>
