@@ -2,7 +2,7 @@
   "name": "co2-avatar",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://programarivm.github.io/co2-avatar/",
+  "homepage": "https://programarivm.github.io/co2-avatar",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "flux": "^3.1.3",

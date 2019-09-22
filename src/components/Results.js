@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Col, Container, Row, Progress
 } from 'reactstrap';
+import { SocialMediaShare } from './SocialMediaShare.js';
 import AppStore from '../stores/AppStore.js';
 
 class Results extends React.Component {
@@ -39,6 +40,7 @@ class Results extends React.Component {
                   <Progress className="mt-2" color="success" value={this.state.pct_transport} />
                 </Col>
                 <h5 className="mt-3">{this.state.avatar.description}</h5>
+                <SocialMediaShare />
               </Row>
         }
       </Container>
