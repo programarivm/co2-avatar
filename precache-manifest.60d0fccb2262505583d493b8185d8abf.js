@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2f0c6f46babe2dd432a6c8df24015ac2",
+    "revision": "051c1c99eb6d50a03c5eff56a0cef4bb",
     "url": "/co2-avatar/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/co2-avatar/static/css/2.22a7d4ef.chunk.css"
   },
   {
-    "revision": "a8ab7600a74f34e757d9",
+    "revision": "2974c76f5d40672f5e04",
     "url": "/co2-avatar/static/css/main.e2c9c706.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/co2-avatar/static/js/2.cd2726d3.chunk.js"
   },
   {
-    "revision": "a8ab7600a74f34e757d9",
-    "url": "/co2-avatar/static/js/main.448903e2.chunk.js"
+    "revision": "2974c76f5d40672f5e04",
+    "url": "/co2-avatar/static/js/main.f4a74a69.chunk.js"
   },
   {
     "revision": "1fad641eca32b29aaac6",
