@@ -149,12 +149,11 @@ class Api {
       pct_residential: pct.residential,
       pct_transport: pct.transport,
       avatar: Api.avatar(pctAverage, points),
-      tip: Api.tip(pct)
+      tip: Api.tip(pctAverage, pct)
     }
   }
 
-  static tip(pct) {
-    let tip;
+  static tip(pctAverage, pct) {
     let tips = {
       food: [
         "Try a vegan diet",
@@ -170,17 +169,21 @@ class Api {
       ]
     };
 
-    if (pct.food < 80) {
-      tip = tips.food[Math.floor(Math.random()*tips.food.length)];
-    } else if (pct.residential < 80) {
-      tip = tips.residential[Math.floor(Math.random()*tips.residential.length)];
-    } else if (pct.transport < 80) {
-      tip = tips.transport[Math.floor(Math.random()*tips.transport.length)];
+    if (pctAverage >= 80) {
+      return "Your mission is to teach the rest of avatars how to save the planet";
     } else {
-      tip = "Your mission is to teach the rest of avatars how to save the planet"
+      let randomTips = [];
+      if (pct.food < 80) {
+        randomTips.push(tips.food[Math.floor(Math.random()*tips.food.length)]);
+      }
+      if (pct.residential < 80) {
+        randomTips.push(tips.residential[Math.floor(Math.random()*tips.residential.length)]);
+      }
+      if (pct.transport < 80) {
+        randomTips.push(tips.transport[Math.floor(Math.random()*tips.transport.length)]);
+      }
+      return randomTips[Math.floor(Math.random()*randomTips.length)];
     }
-
-    return tip;
   }
 }
 
