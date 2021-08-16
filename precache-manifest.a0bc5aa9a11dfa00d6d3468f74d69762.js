@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7e9ee0414c1623f18d1b8783eb78aa3f",
+    "revision": "90621e60347389db90bcb244e8acf37f",
     "url": "/co2-avatar/index.html"
   },
   {
-    "revision": "3d3d0ec53b5de196fc44",
-    "url": "/co2-avatar/static/css/2.22a7d4ef.chunk.css"
+    "revision": "d9f67ea4cdab83f0860e",
+    "url": "/co2-avatar/static/css/2.e4777ce8.chunk.css"
   },
   {
-    "revision": "553da3b2431d9cc9cc65",
-    "url": "/co2-avatar/static/css/main.e2c9c706.chunk.css"
+    "revision": "db92f660b5c2ce475e3a",
+    "url": "/co2-avatar/static/css/main.4652bcb7.chunk.css"
   },
   {
-    "revision": "3d3d0ec53b5de196fc44",
-    "url": "/co2-avatar/static/js/2.cd2726d3.chunk.js"
+    "revision": "d9f67ea4cdab83f0860e",
+    "url": "/co2-avatar/static/js/2.a0dff29c.chunk.js"
   },
   {
-    "revision": "553da3b2431d9cc9cc65",
-    "url": "/co2-avatar/static/js/main.eec081fe.chunk.js"
+    "revision": "db92f660b5c2ce475e3a",
+    "url": "/co2-avatar/static/js/main.f10d2d82.chunk.js"
   },
   {
-    "revision": "1fad641eca32b29aaac6",
-    "url": "/co2-avatar/static/js/runtime~main.abdeb7e2.js"
+    "revision": "ef27146467a7edc21f42",
+    "url": "/co2-avatar/static/js/runtime~main.294487f9.js"
   },
   {
     "revision": "2ec46c97c52ff158fd9d20ae332e5572",
@@ -58,5 +58,17 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0c63cbe656323400553322ee4ba2cfa8",
     "url": "/co2-avatar/static/media/polluter.0c63cbe6.jpg"
+  },
+  {
+    "revision": "5f1778fe03f3dcd57692c5da32758036",
+    "url": "/co2-avatar/static/media/slide-01.5f1778fe.jpg"
+  },
+  {
+    "revision": "d9dbaf436529d6b26821390339ecd868",
+    "url": "/co2-avatar/static/media/slide-02.d9dbaf43.jpg"
+  },
+  {
+    "revision": "421028198295a7c0b36a7d59ad2be00b",
+    "url": "/co2-avatar/static/media/slide-03.42102819.jpg"
   }
 ]);

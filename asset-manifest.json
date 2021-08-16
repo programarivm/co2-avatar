@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/co2-avatar/static/css/main.e2c9c706.chunk.css",
-    "main.js": "/co2-avatar/static/js/main.eec081fe.chunk.js",
-    "main.js.map": "/co2-avatar/static/js/main.eec081fe.chunk.js.map",
-    "runtime~main.js": "/co2-avatar/static/js/runtime~main.abdeb7e2.js",
-    "runtime~main.js.map": "/co2-avatar/static/js/runtime~main.abdeb7e2.js.map",
-    "static/css/2.22a7d4ef.chunk.css": "/co2-avatar/static/css/2.22a7d4ef.chunk.css",
-    "static/js/2.cd2726d3.chunk.js": "/co2-avatar/static/js/2.cd2726d3.chunk.js",
-    "static/js/2.cd2726d3.chunk.js.map": "/co2-avatar/static/js/2.cd2726d3.chunk.js.map",
+    "main.css": "/co2-avatar/static/css/main.4652bcb7.chunk.css",
+    "main.js": "/co2-avatar/static/js/main.f10d2d82.chunk.js",
+    "main.js.map": "/co2-avatar/static/js/main.f10d2d82.chunk.js.map",
+    "runtime~main.js": "/co2-avatar/static/js/runtime~main.294487f9.js",
+    "runtime~main.js.map": "/co2-avatar/static/js/runtime~main.294487f9.js.map",
+    "static/css/2.e4777ce8.chunk.css": "/co2-avatar/static/css/2.e4777ce8.chunk.css",
+    "static/js/2.a0dff29c.chunk.js": "/co2-avatar/static/js/2.a0dff29c.chunk.js",
+    "static/js/2.a0dff29c.chunk.js.map": "/co2-avatar/static/js/2.a0dff29c.chunk.js.map",
     "index.html": "/co2-avatar/index.html",
-    "precache-manifest.43b3f39820096c5f7e71dbb2c7793818.js": "/co2-avatar/precache-manifest.43b3f39820096c5f7e71dbb2c7793818.js",
+    "precache-manifest.a0bc5aa9a11dfa00d6d3468f74d69762.js": "/co2-avatar/precache-manifest.a0bc5aa9a11dfa00d6d3468f74d69762.js",
     "service-worker.js": "/co2-avatar/service-worker.js",
-    "static/css/2.22a7d4ef.chunk.css.map": "/co2-avatar/static/css/2.22a7d4ef.chunk.css.map",
-    "static/css/main.e2c9c706.chunk.css.map": "/co2-avatar/static/css/main.e2c9c706.chunk.css.map",
+    "static/css/2.e4777ce8.chunk.css.map": "/co2-avatar/static/css/2.e4777ce8.chunk.css.map",
+    "static/css/main.4652bcb7.chunk.css.map": "/co2-avatar/static/css/main.4652bcb7.chunk.css.map",
     "static/media/arctic.jpeg": "/co2-avatar/static/media/arctic.2ec46c97.jpeg",
     "static/media/bees.jpg": "/co2-avatar/static/media/bees.4452f802.jpg",
     "static/media/earth.jpg": "/co2-avatar/static/media/earth.8bbb90f3.jpg",
@@ -21,6 +21,9 @@
     "static/media/london.jpg": "/co2-avatar/static/media/london.d9f5d8be.jpg",
     "static/media/mutant.jpg": "/co2-avatar/static/media/mutant.33de7467.jpg",
     "static/media/neutral.jpg": "/co2-avatar/static/media/neutral.3e5520df.jpg",
-    "static/media/polluter.jpg": "/co2-avatar/static/media/polluter.0c63cbe6.jpg"
+    "static/media/polluter.jpg": "/co2-avatar/static/media/polluter.0c63cbe6.jpg",
+    "static/media/slide-01.jpg": "/co2-avatar/static/media/slide-01.5f1778fe.jpg",
+    "static/media/slide-02.jpg": "/co2-avatar/static/media/slide-02.d9dbaf43.jpg",
+    "static/media/slide-03.jpg": "/co2-avatar/static/media/slide-03.42102819.jpg"
   }
 }
