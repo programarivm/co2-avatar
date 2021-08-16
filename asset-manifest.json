@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/co2-avatar/static/css/main.4652bcb7.chunk.css",
-    "main.js": "/co2-avatar/static/js/main.b231c8bd.chunk.js",
-    "main.js.map": "/co2-avatar/static/js/main.b231c8bd.chunk.js.map",
+    "main.js": "/co2-avatar/static/js/main.1b4caa59.chunk.js",
+    "main.js.map": "/co2-avatar/static/js/main.1b4caa59.chunk.js.map",
     "runtime~main.js": "/co2-avatar/static/js/runtime~main.294487f9.js",
     "runtime~main.js.map": "/co2-avatar/static/js/runtime~main.294487f9.js.map",
     "static/css/2.e4777ce8.chunk.css": "/co2-avatar/static/css/2.e4777ce8.chunk.css",
     "static/js/2.a0dff29c.chunk.js": "/co2-avatar/static/js/2.a0dff29c.chunk.js",
     "static/js/2.a0dff29c.chunk.js.map": "/co2-avatar/static/js/2.a0dff29c.chunk.js.map",
     "index.html": "/co2-avatar/index.html",
-    "precache-manifest.f3fa9e44c81618e643649d085aa516a8.js": "/co2-avatar/precache-manifest.f3fa9e44c81618e643649d085aa516a8.js",
+    "precache-manifest.cb7d9aa551aa45758373e4b61d52e2a7.js": "/co2-avatar/precache-manifest.cb7d9aa551aa45758373e4b61d52e2a7.js",
     "service-worker.js": "/co2-avatar/service-worker.js",
     "static/css/2.e4777ce8.chunk.css.map": "/co2-avatar/static/css/2.e4777ce8.chunk.css.map",
     "static/css/main.4652bcb7.chunk.css.map": "/co2-avatar/static/css/main.4652bcb7.chunk.css.map",
@@ -22,8 +22,8 @@
     "static/media/mutant.jpg": "/co2-avatar/static/media/mutant.33de7467.jpg",
     "static/media/neutral.jpg": "/co2-avatar/static/media/neutral.3e5520df.jpg",
     "static/media/polluter.jpg": "/co2-avatar/static/media/polluter.0c63cbe6.jpg",
-    "static/media/slide-01.jpg": "/co2-avatar/static/media/slide-01.5f1778fe.jpg",
-    "static/media/slide-02.jpg": "/co2-avatar/static/media/slide-02.d9dbaf43.jpg",
-    "static/media/slide-03.jpg": "/co2-avatar/static/media/slide-03.42102819.jpg"
+    "static/media/slide-01.jpg": "/co2-avatar/static/media/slide-01.de0844bf.jpg",
+    "static/media/slide-02.jpg": "/co2-avatar/static/media/slide-02.380c9fcd.jpg",
+    "static/media/slide-03.jpg": "/co2-avatar/static/media/slide-03.e479cd2f.jpg"
   }
 }

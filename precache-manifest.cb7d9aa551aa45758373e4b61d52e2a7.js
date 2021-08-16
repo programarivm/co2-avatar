@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a27107efcdcf97c551891e6cf7f263ca",
+    "revision": "a0e5e4d09f0af3ffdaaf9c6a6872e62e",
     "url": "/co2-avatar/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/co2-avatar/static/css/2.e4777ce8.chunk.css"
   },
   {
-    "revision": "e40800fb1c2cb0d79fe9",
+    "revision": "607903b7fcde2b1af6ab",
     "url": "/co2-avatar/static/css/main.4652bcb7.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/co2-avatar/static/js/2.a0dff29c.chunk.js"
   },
   {
-    "revision": "e40800fb1c2cb0d79fe9",
-    "url": "/co2-avatar/static/js/main.b231c8bd.chunk.js"
+    "revision": "607903b7fcde2b1af6ab",
+    "url": "/co2-avatar/static/js/main.1b4caa59.chunk.js"
   },
   {
     "revision": "ef27146467a7edc21f42",
@@ -60,15 +60,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/co2-avatar/static/media/polluter.0c63cbe6.jpg"
   },
   {
-    "revision": "5f1778fe03f3dcd57692c5da32758036",
-    "url": "/co2-avatar/static/media/slide-01.5f1778fe.jpg"
+    "revision": "de0844bff57c73a63454645bd71bca8f",
+    "url": "/co2-avatar/static/media/slide-01.de0844bf.jpg"
   },
   {
-    "revision": "d9dbaf436529d6b26821390339ecd868",
-    "url": "/co2-avatar/static/media/slide-02.d9dbaf43.jpg"
+    "revision": "380c9fcd972d5bfa746ba9173e701abb",
+    "url": "/co2-avatar/static/media/slide-02.380c9fcd.jpg"
   },
   {
-    "revision": "421028198295a7c0b36a7d59ad2be00b",
-    "url": "/co2-avatar/static/media/slide-03.42102819.jpg"
+    "revision": "e479cd2f7a7f6c8cbfe863c7b23333b4",
+    "url": "/co2-avatar/static/media/slide-03.e479cd2f.jpg"
   }
 ]);
