@@ -4,7 +4,6 @@ import { Link, Route, Redirect } from 'react-router-dom';
 import Home from "./Home.js";
 import SavePlanet from "./SavePlanet.js";
 import TakeTest from "./TakeTest.js";
-import Footer from "./Footer.js";
 import logo from '../assets/images/logo.png';
 import './MainNav.css';
 
@@ -49,7 +48,6 @@ const MainNav = () => {
         path="/take-the-test"
         render={(props) => <TakeTest {...props} />}
       />
-      <Footer />
     </div>
   );
 }
