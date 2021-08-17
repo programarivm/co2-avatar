@@ -5,3 +5,7 @@
 .MainNav a {
   color: #fff !important;
 }
+
+.MainNav a:hover {
+  text-decoration: underline;
+}
