@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/co2-avatar/static/css/main.ac129e96.chunk.css",
-    "main.js": "/co2-avatar/static/js/main.08e7e185.chunk.js",
-    "main.js.map": "/co2-avatar/static/js/main.08e7e185.chunk.js.map",
+    "main.js": "/co2-avatar/static/js/main.266f8689.chunk.js",
+    "main.js.map": "/co2-avatar/static/js/main.266f8689.chunk.js.map",
     "runtime~main.js": "/co2-avatar/static/js/runtime~main.294487f9.js",
     "runtime~main.js.map": "/co2-avatar/static/js/runtime~main.294487f9.js.map",
     "static/css/2.e4777ce8.chunk.css": "/co2-avatar/static/css/2.e4777ce8.chunk.css",
     "static/js/2.6bca7cb4.chunk.js": "/co2-avatar/static/js/2.6bca7cb4.chunk.js",
     "static/js/2.6bca7cb4.chunk.js.map": "/co2-avatar/static/js/2.6bca7cb4.chunk.js.map",
     "index.html": "/co2-avatar/index.html",
-    "precache-manifest.fdaf7f79c4b635d93d27bdc354e04c08.js": "/co2-avatar/precache-manifest.fdaf7f79c4b635d93d27bdc354e04c08.js",
+    "precache-manifest.acdb6e934fdad9e313647de82ed416cf.js": "/co2-avatar/precache-manifest.acdb6e934fdad9e313647de82ed416cf.js",
     "service-worker.js": "/co2-avatar/service-worker.js",
     "static/css/2.e4777ce8.chunk.css.map": "/co2-avatar/static/css/2.e4777ce8.chunk.css.map",
     "static/css/main.ac129e96.chunk.css.map": "/co2-avatar/static/css/main.ac129e96.chunk.css.map",
