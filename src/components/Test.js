@@ -47,7 +47,7 @@ const questions = [
   },
   {
     "type": "residential",
-    "text": "You know a few handy tricks to keep your house warm in winter.",
+    "text": "You know a few handy tricks to keep your house warm in winter and cool in summer.",
     "values": [50]
   },
   {
